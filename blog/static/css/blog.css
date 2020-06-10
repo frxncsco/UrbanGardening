@@ -1,13 +1,13 @@
 .page-header {
     background-color: rgb(94, 194, 0);
-    background-image: url("https://cdn.pixabay.com/photo/2018/05/08/21/14/meadow-3383969__340.jpg");
+    background-image: url("https://golosiy.com/wp-content/uploads/2016/01/centralpark_panorama.jpg");
     background-size: 100% auto;
     margin-top: 0;
-    padding: 50px;
+    padding: 135px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+    color: #000000;
     font-size: 36pt;
     text-decoration: none;
 }
