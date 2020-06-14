@@ -1,4 +1,6 @@
 .page-header {
+    position: sticky;
+    top: 0px;
     background-color: rgb(94, 194, 0);
     background-image: url("https://golosiy.com/wp-content/uploads/2016/01/centralpark_panorama.jpg");
     background-size: 100% auto;
