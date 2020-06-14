@@ -1,17 +1,19 @@
 .page-header {
-    position: sticky;
-    top: 0px;
     background-color: rgb(94, 194, 0);
     background-image: url("https://golosiy.com/wp-content/uploads/2016/01/centralpark_panorama.jpg");
     background-size: 100% auto;
     margin-top: 0;
     padding: 135px;
+    position: sticky;
+    top: 0;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #000000;
     font-size: 36pt;
     text-decoration: none;
+    position: sticky;
+    top: 0px;
 }
 
 .content {
@@ -41,7 +43,7 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: #000000;
     float: right;
     font-size: 30pt;
     margin-right: 60px;
@@ -53,6 +55,7 @@ h1, h2, h3, h4 {
     border-color: rgb(94, 194, 0);
     border-width: 5px;
     border-style: solid;
+
     
 }
 
@@ -61,4 +64,7 @@ h1, h2, h3, h4 {
 }
 .text-center{
     text-align: center;
+}
+.text-right {
+    text-align: right;
 }
