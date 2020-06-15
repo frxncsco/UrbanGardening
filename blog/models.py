@@ -8,6 +8,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     bild = models.ImageField(upload_to= 'post_list', blank = True )
+    place = models.CharField(max_length=100)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
