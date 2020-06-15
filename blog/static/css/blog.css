@@ -4,6 +4,7 @@
     margin-top: 0;
     padding: 135px;
     margin-bottom: 0px;
+    
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -16,8 +17,8 @@
 .content {
     margin-top: 50px;
     margin-bottom: 20px;
-    left: 50%;
-	width: 700px;
+    left: 47%;
+	width: 1000px;
 	margin-left: -250px;
     position: relative;
 }
@@ -29,6 +30,9 @@ h1, h2, h3, h4 {
 
 .date {
     color: #828282;
+    text-align: right;
+    padding-right: 20px;
+    align-items: right;
 
 }
 
@@ -49,10 +53,11 @@ h1, h2, h3, h4 {
 
 .post {
     margin-bottom: 60px;
-    text-align: center;
-    border-color:yellowgreen;
+    text-align: left;
+    border-color:rgb(166, 240, 57);
     border-width: 5px;
     border-style: solid;
+    padding: 20px;
     
 }
 
@@ -61,7 +66,7 @@ h1, h2, h3, h4 {
 }
 
 header {
-    background-color: greenyellow;
+    background:rgb(166, 240, 57);
     width: 100%;
     height: 100px;
     line-height: 100px;
@@ -70,6 +75,7 @@ header {
     top: 0px;
     text-align: center;
     align-items: center;
+    z-index: 99999;
 }
 
 .box1 {
@@ -95,4 +101,3 @@ header {
 .box2 ul h1 a{ 
     color: grey;
 }
-

@@ -5,8 +5,9 @@ from django.utils import timezone
 
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
+    titel = models.CharField(max_length=200)
     text = models.TextField()
+    age = models.CharField (max_length=10)
     bild = models.ImageField(upload_to= 'post_list', blank = True )
     place = models.CharField(max_length=100)
     created_date = models.DateTimeField(default=timezone.now)
@@ -17,4 +18,4 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return self.title
+        return self.titel
