@@ -3,8 +3,7 @@
     background-size: 100% auto;
     margin-top: 0;
     padding: 135px;
-    margin-bottom: 0px;
-    
+    margin-bottom: 0px;   
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -23,12 +22,15 @@
     position: relative;
 }
 
-h2 {
-    font-family: 'Arial';
-    font-family: cursive;
+.date {
+    color: #828282;
+    text-align: right;
+    padding-right: 20px;
+    align-items: right;
+
 }
 
-.date {
+.author{
     color: #828282;
     text-align: right;
     padding-right: 20px;
@@ -57,12 +59,7 @@ h2 {
     border-color:rgb(166, 240, 57);
     border-width: 5px;
     border-style: solid;
-    padding: 20px;
-    
-}
-
-.post h2 a, .post h2 a:visited {
-    color: #000000;
+    padding: 20px;   
 }
 
 header {
@@ -74,17 +71,13 @@ header {
     position: sticky;
 }
 
-.box2 ul h1 a{ 
-    color: black;
-}
-
 .Menuband {
     list-style: none;
 }
 
 .Menuband li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 30px;
 }
 
 .Menuband li a {
@@ -115,3 +108,12 @@ button {
 button:hover {
     background-color: green;
 }
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    font-size: 40px;
+    color: black;
+    text-decoration: none;
+}
+
