@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
+        <div class="Titel">
+            <h1>Urban Gardening</h1>
+        </div>
+        </header>
         <header>
             <div class="box1">
                 <h3>Susans Blog</h3>
@@ -30,14 +34,13 @@
                 </ul>     
             </div>                 
         </header>
-        <div class="content container">
+        <div class="content-container">
             <div class="row">
                 <div class="col-md-8">
                 {% block content %}
                 {% endblock %}
                 </div>
             </div>
-        </div>
-        
+        </div> 
     </body>
 </html>

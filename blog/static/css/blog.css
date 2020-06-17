@@ -1,19 +1,21 @@
-.page-header {
-    background-image: url("https://cdn.pixabay.com/photo/2017/04/07/13/16/leaf-2210973_960_720.jpg");
-    background-size: 100% auto;
+.Titel {
+    background: blanchedalmond;
+    background-size: Auto;
     margin-top: 0;
-    padding: 135px;
+    padding: 40;
     margin-bottom: 0px;   
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #000000;
-    font-size: 40pt;
-    font-weight: 800;
-    text-decoration: none;
+h1 {
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 60pt;
+    text-align: center;
+    color: black;
 }
 
-.content {
+.content-container {
     margin-top: 50px;
     margin-bottom: 20px;
     left: 50%;
@@ -109,7 +111,7 @@ button:hover {
     background-color: green;
 }
 
-h2 {
+.post h2 {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 800;
     font-size: 40px;
@@ -117,3 +119,12 @@ h2 {
     text-decoration: none;
 }
 
+body {
+    background-color: whitesmoke;
+    align-items: center;
+}
+
+section {
+    background: white;
+    padding: none;
+}
