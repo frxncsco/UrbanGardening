@@ -5,8 +5,8 @@
         <h2>{{ post.titel }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
 
-        <div class="date">
-            {{ post.author}}, {{ post.age }} ({{post.place}})
+        <div class="date"> <!--anlegen der optischen Felder für Author, Alter und Ort mit Komma und Klammern in einer Zeile --> 
+            {{ post.author}}, {{ post.alter }} ({{post.ort}})
         </div>
         {% if post.published_date %}
             <div class="date">
