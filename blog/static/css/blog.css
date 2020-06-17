@@ -101,3 +101,15 @@ header {
 .box2 ul h1 a{ 
     color: grey;
 }
+
+.Menuband {
+    background: white;
+    list-style: none;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+.Menuband {
+    display: inline;
+}

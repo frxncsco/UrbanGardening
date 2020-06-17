@@ -22,18 +22,17 @@
                         <a href="{% url 'post_new' %}"><span class="glyphicon glyphicon-plus"></span></a>
                     {% endif %}
                     </h1>
-                </ul>
-            </div>         
-            <div class="Menüband">
-                <ul>
-                    <li> <a href="./post_list.html">Startseite</a> </li>
-                    <li> <a href="./post_detail.html">Blog</a> </li>
-                    <li>Urban Gardening </li>
-                    <li>Events in meiner Nähe </li>
-                    <li>Über mich </li>
-                </ul>
-            </div>         
-    </header>
+                </ul>     
+            </div>                 
+        </header>
+        <nav>
+            <ul class="Menuband">
+                <li> <a href="{% url 'post_list' %}">STARTSEITE</a></li>
+                <li><a href="{% url 'urbangardening' %}">URBAN GARDENING</a></li>
+                <li><a href="{% url 'events' %}">EVENTS IN MEINER NÄHE</a></li>
+                <li><a href="{% url 'ubermich' %}">ÜBER MICH</a></li>
+            </ul>
+        </nav>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
@@ -45,4 +44,3 @@
         
     </body>
 </html>
-
