@@ -15,24 +15,24 @@
             <div class="box1">
                 <h1>Susans-Blog</h1>
             </div>
+            <nav>
+                <ul class="Menuband">
+                    <li> <a href="{% url 'post_list' %}">STARTSEITE</a></li>
+                    <li><a href="{% url 'urbangardening' %}">URBAN GARDENING</a></li>
+                    <li><a href="{% url 'events' %}">EVENTS IN MEINER NÄHE</a></li>
+                    <li><a href="{% url 'ubermich' %}">ÜBER MICH</a></li>
+                </ul>
+            </nav>
             <div class="box2">
                 <ul>
                     <h1>
                     {% if user.is_authenticated %}
-                        <a href="{% url 'post_new' %}"><span class="glyphicon glyphicon-plus"></span></a>
+                        <a href="{% url 'post_new' %}"><button><span class="glyphicon glyphicon-plus"></span></a>
                     {% endif %}
                     </h1>
                 </ul>     
             </div>                 
         </header>
-        <nav>
-            <ul class="Menuband">
-                <li> <a href="{% url 'post_list' %}">STARTSEITE</a></li>
-                <li><a href="{% url 'urbangardening' %}">URBAN GARDENING</a></li>
-                <li><a href="{% url 'events' %}">EVENTS IN MEINER NÄHE</a></li>
-                <li><a href="{% url 'ubermich' %}">ÜBER MICH</a></li>
-            </ul>
-        </nav>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
