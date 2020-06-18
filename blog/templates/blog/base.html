@@ -22,6 +22,13 @@
                 </ul>
             </nav>                
         </header>
+        {% if user.is_authenticated %}
+            <div class="Blogeintrag">
+                <p>
+                    <a href="{% url 'post_new' %}"><button>Blogeintrag Hinzufügen</button></a>
+                </p>
+            </div>
+        {% endif %}
         <div class="content-container">
             <div class="row">
                 <div class="col-md-8">
