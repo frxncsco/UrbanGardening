@@ -48,3 +48,6 @@ def ubermich(request):
 
 def urbangardening(request):
     return render(request, 'blog/urbangardening.html')
+
+def startseite(request):
+    return render(request, 'blog/startseite.html')
