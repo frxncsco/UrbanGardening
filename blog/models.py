@@ -8,7 +8,7 @@ class Post(models.Model):
     titel = models.CharField(max_length=200)
     text = models.TextField()
     alter = models.CharField (max_length=10)#Anlage der Variable Alter mit entsprechendem Eingabefeld
-    bild = models.ImageField(upload_to= 'post_list', blank = True ) #Anlage der Variable Bild mit entsprechendem Eingabefeld
+    bild = models.ImageField(default='default.jpg', upload_to= 'media', blank = True ) #Anlage der Variable Bild mit entsprechendem Eingabefeld
     ort = models.CharField(max_length=100)#Anlage der Variable Ort mit entsprechendem Eingabefeld
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
