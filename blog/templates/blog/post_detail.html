@@ -14,8 +14,8 @@
             </div>
         {% endif %}
         <div class="date">
-            <p>Bild(er):</p>
-            <img src="{{ post.bild.url }}" />
+            <p>Bild:</p>
+            <img src="{{ post.bild.url }}" width="100%" height="auto" /> <!-- Bild anzeigen lassen in 100% größe in der Mitte des Kastens-->
         </div>
         <div class="date">
         {% if user.is_authenticated %}
