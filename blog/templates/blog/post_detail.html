@@ -15,7 +15,7 @@
         {% endif %}
         <div class="date">
             <p>Bild(er):</p>
-            <img src="{{ post.bild.url }}" />
+            <img src="{{ post.bild.url }}" alt="{{ post.titel }}"/>
         </div>
         <div class="date">
         {% if user.is_authenticated %}
