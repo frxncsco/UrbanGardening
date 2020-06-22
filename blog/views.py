@@ -15,11 +15,7 @@ def post_detail(request, pk):
 
 def post_new(request):
     if request.method == "POST":
-<<<<<<< HEAD
-        form = PostForm(request.POST, request.MEDIA)
-=======
         form = PostForm(request.POST, request.FILES)
->>>>>>> 8d9f2494d179239dc7aa950dfd47bde38de8a9f2
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
