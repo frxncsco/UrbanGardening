@@ -1,11 +1,11 @@
 /* Header mit URL-Bild */
+
 .page-header {
     background-image: url("https://cdn.pixabay.com/photo/2017/04/07/13/16/leaf-2210973_960_720.jpg");
     background-size: 100% auto;
     margin-top: 0;
     padding: 135px;
     margin-bottom: 0px;
-    
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -18,10 +18,9 @@
 .content {
     margin-top: 50px;
     margin-bottom: 20px;
-    left: 50%;
-	width: 700px;
-	margin-left: -250px;
+	width: auto;
     position: relative;
+    left: auto;
 }
 
 h1, h2, h3, h4 {
@@ -102,4 +101,122 @@ header {
 
 .box2 ul h1 a{ 
     color: grey;
+}
+
+/*
+#########################################################################################################
+                                    Different Screen Sizes
+#########################################################################################################
+*/
+@media (max-width: 1800px) {
+    .page-header {
+        padding: 100px;
+    }
+}
+@media (max-width: 1400px) {
+    .page-header {
+        padding: 50px;
+    }
+}
+
+/*Mobil Version*/
+@media (max-width: 800px) {
+    .page-header {
+        padding: 20px;
+    }
+    .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #000000;
+    font-size: 25pt;
+    font-weight: 800;
+    text-decoration: none;
+    }
+
+    .content {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    left: 50%;
+	width: 400px;
+	margin-left: -250px;
+    position: relative;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: 'Arial';
+        font-family: cursive;
+    }
+
+    .date {
+        color: #828282;
+        text-align: right;
+        padding-right: 20px;
+        align-items: right;
+
+    }
+
+    .save {
+        float: right;
+    }
+
+    .post-form textarea, .post-form input {
+        width: 100%;
+    }
+
+    .top-menu, .top-menu:hover, .top-menu:visited {
+        color: #000000;
+        float: right;
+        font-size: 30pt;
+        margin-right: 60px;
+    }
+
+    .post {
+        margin-bottom: 60px;
+        text-align: left;
+        border-color:rgb(166, 240, 57);
+        border-width: 5px;
+        border-style: solid;
+        padding: 20px;
+
+    }
+
+    .post h2 a, .post h2 a:visited {
+        color: #000000;
+    }
+    /* Erstellung der Eigenschaften des Headers/ Menüband*/
+    header {
+        background:rgb(166, 240, 57);
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+        position: sticky;
+        display: flex;
+        top: 0px;
+        text-align: center;
+        align-items: center;
+        z-index: 99999;
+    }
+    /*"Susans Blog"*/
+    .box1 {
+        color: grey;
+        width: 20%;
+        height: auto;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    /*"Alles andere Im Menü"*/
+    .box2 {
+        width: 80%;
+        height: auto;
+    }
+
+    .box2 ul{
+        float: right;
+        padding-right: 50px;
+        display: block;
+    }
+
+    .box2 ul h1 a{
+        color: grey;
+    }
 }
