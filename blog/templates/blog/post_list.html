@@ -21,6 +21,11 @@
                         <div class="post">
                             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titel }}</a></h2>
                             <p>{{ post.text|linebreaksbr }}</p>
+                            {% if post.bild %}
+                            <div class="date">
+                            <img src="{{ post.bild.url }}">
+                            </div>
+                            {% endif %}
                             <div class="date">
                                 {{ post.author|linebreaksbr }}
                             </div>
