@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+<html>
+    <head>
+        <title>Safe the Susan</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                        <div class="Willkommen">
+                            <h3>Herzlich Willkommen auf meinem Blog </h3>
+                            <p>Mein Name ist Susan. Ich bin 22 Jahre alt und aktuelle Masterandin an der Freien Universität zu Berlin. <br /> Schon seit langem ist mir klar geworden wie wichtig es ist, die Umwelt zu schützen. <br /> Daher habe ich diesen Blog errichtet, um Menschen
+                            darauf aufmerksam zu machen, wie sie mit kleinen aber einfachen Tricks die Umwelt schützen können. </p>
+                            <p>Ich freue mich euch alle kennenzulernen!</p>
+                        </div>
+                        <div class="AktuellerBlog">
+                            <h3>Aktuelle Blogeinträge</h3>
+                            <p>Hier findet Ihr aktuell die neuesten 3 Blogeinträge. Vergesst nicht: SHARING IS CARING🤗</p>
+                            <p>(Am besten sollten jetzt hier die Bilder und Überscrhiften gezeigt werden, die dann auf den Blog weiterleiten)</p>
+                        </div>
+                        <div class="Aktuelles">
+                            <h3>Aktuelles</h3>
+                            <p>Sehr wichtige Informationen</p>
+                        </div>
+                    {% endblock %}

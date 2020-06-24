@@ -38,3 +38,15 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def events(request):
+    return render(request,'blog/events.html')
+
+def ubermich(request):
+    return render(request, 'blog/ubermich.html')
+
+def urbangardening(request):
+    return render(request, 'blog/urbangardening.html')
+
+def startseite(request):
+    return render(request, 'blog/startseite.html')

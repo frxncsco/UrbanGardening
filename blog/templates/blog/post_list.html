@@ -9,10 +9,6 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div class="page-header"> 
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            <h1><a href="/">Safe the Susan</a></h1>
-        </div>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
@@ -26,7 +22,7 @@
                             <img src="{{ post.bild.url }}" width="25%" height="auto"> <!--Bild anzeigen lassen mit 25% Größe auf der linken Seite des Kastens-->
                             </div>
                             {% endif %}
-                            <div class="date">
+                            <div class="author">
                                 {{ post.author|linebreaksbr }}
                             </div>
                             <div class="date">

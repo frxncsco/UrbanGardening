@@ -1,106 +1,191 @@
-/* Header mit URL-Bild */
-
-.page-header {
-    background-image: url("https://cdn.pixabay.com/photo/2017/04/07/13/16/leaf-2210973_960_720.jpg");
-    background-size: 100% auto;
+.Titel {
+    background: blanchedalmond;
+    background-size: Auto;
     margin-top: 0;
-    padding: 135px;
-    margin-bottom: 0px;
+    padding: 40;
+    margin-bottom: 0px;   
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #000000;
-    font-size: 40pt;
-    font-weight: 800;
+h1 {
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 60pt;
+    text-align: center;
+    color: black;
+}
+
+h3 {
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 30pt;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 10px 15%;
+    background:white;
+    position: sticky;
+}
+
+.Menuband {
+    list-style: none;
+}
+
+.Menuband li {
+    display: inline-block;
+    padding: 0px 30px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
     text-decoration: none;
 }
 
-.content {
-    margin-top: 50px;
-    margin-bottom: 20px;
-	width: auto;
-    position: relative;
-    left: auto;
+
+.Menuband li a {
+    transition: all 0.3s ease 0s;
+    color: black;
+
+.Menuband li a:hover {
+    color: #0088a9;
+    text-decoration: none;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Arial';
-    font-family: cursive;
+.Blogeintrag {
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding: 0px 15%;
+}
+
+.Blogeintrag a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 14pt;
+    color: black;
+}
+
+.Blogeintrag button {
+    padding: 9px 25px;
+    background-color: yellow;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    align-items: center;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    background: whitesmoke;
+    border-color: blue;
+    border-style: solid;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    border: orangered;
+    border-style: solid;
+    width: 100%;
+}
+
+.post {
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    border-color:rgb(166, 240, 57);
+    border-style: solid;   
+    width: 100%;
+}
+
+.post h2 a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.post h2:hover {
+    text-decoration: none;
+}
+
+.post-form textarea, .post-form input {
+
+    width: 100%;
+}
+
+p {
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 .date {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: normal;
     color: #828282;
     text-align: right;
-    padding-right: 20px;
     align-items: right;
+}
 
+.author{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: normal;
+    color: #828282;
+    text-align: right;
+    align-items: right;
 }
 
 .save {
     float: right;
 }
 
-.post-form textarea, .post-form input {
-    width: 100%;
+body {
+    background-color: whitesmoke;
+    align-items: center;
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: #000000;
-    float: right;
-    font-size: 30pt;
-    margin-right: 60px;
+section {
+    background: white;
+    padding: none;
 }
 
-.post {
-    margin-bottom: 60px;
-    text-align: left;
+div {
+    padding: 0px 0px;
+}
+
+/*Startseiten Elemente*/ 
+
+.willkommen {
+    padding: 10px 20px;
+    margin-bottom: 40px;
     border-color:rgb(166, 240, 57);
-    border-width: 5px;
     border-style: solid;
-    padding: 20px;
-    
 }
 
-.post h2 a, .post h2 a:visited { 
-    color: #000000;
-}
-/* Erstellung der Eigenschaften des Headers/ Menüband*/
-header {
-    background:rgb(166, 240, 57);
-    width: 100%;
-    height: 100px;
-    line-height: 100px;
-    position: sticky;
-    display: flex;
-    top: 0px;
-    text-align: center;
-    align-items: center;
-    z-index: 99999;
-}
-/*"Susans Blog"*/
-.box1 {
-    color: grey;
-    width: 20%;
-    height: auto;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-/*"Alles andere Im Menü"*/
-.box2 {
-    width: 80%;
-    height: auto;
+.AktuellerBlog {
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    border-color:rgb(166, 240, 57);
+    border-style: solid;
 }
 
-.box2 ul{
-    float: right;
-    padding-right: 50px;
-    display: block;
-}
-
-.box2 ul h1 a{ 
-    color: grey;
+.Aktuelles {
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    border-color:rgb(166, 240, 57);
+    border-style: solid;
 }
 
 /*
