@@ -5,4 +5,4 @@ class PostForm(forms.ModelForm):
 
     class Meta:
          model = Post
-         fields = ('titel', 'text','bild', 'place', 'age')
+         fields = ('titel', 'text','bild', 'ort', 'alter') #Felder für Titel, Text, Alter, Bild, Ort als Formular angelegt
