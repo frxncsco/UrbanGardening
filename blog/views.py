@@ -15,15 +15,11 @@ def post_detail(request, pk):
 
 def post_new(request):
     if request.method == "POST":
-        form = PostForm(request.POST, request.FILES)
+        form = PostForm(request.POST, request.FILES)#request.FILES ist für Bilder notwendig
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            
             post.publish()
-
-            #post.published_date = timezone.now()    
-            #post.save()
             return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm()
@@ -32,7 +28,7 @@ def post_new(request):
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
-        form = PostForm(request.POST, instance=post)
+        form = PostForm(request.POST, request.FILES, instance=post) #request.FILES ist für Bilder notwendig
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
