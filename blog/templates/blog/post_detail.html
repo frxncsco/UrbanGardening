@@ -6,7 +6,7 @@
         <p>{{ post.text|linebreaksbr }}</p>
 
         <div class="author"> <!--anlegen der optischen Felder für Author, Alter und Ort mit Komma und Klammern in einer Zeile -->
-            {{ post.author}}, {{ post.age }} ({{post.place}})
+            {{ post.author}}, {{ post.alter }} ({{post.ort}})
         </div>
         {% if post.published_date %}
             <div class="date">
