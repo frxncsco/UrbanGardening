@@ -6,7 +6,7 @@ from django.shortcuts import redirect
 # Create your views here.
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 def post_detail(request, pk):
@@ -39,14 +39,15 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
-def events(request):
-    return render(request,'blog/events.html')
+#def events(request):
+#    return render(request,'blog/events.html')
 
 def ubermich(request):
     return render(request, 'blog/ubermich.html')
 
-def urbangardening(request):
-    return render(request, 'blog/urbangardening.html')
+#def urbangardening(request):
+ #   return render(request, 'blog/urbangardening.html')
 
 def startseite(request):
-    return render(request, 'blog/startseite.html')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:3]
+    return render(request, 'blog/startseite.html',  {'posts': posts})

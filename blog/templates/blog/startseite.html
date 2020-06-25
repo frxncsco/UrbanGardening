@@ -2,7 +2,7 @@
 {% load static %}
 <html>
     <head>
-        <title>Safe the Susan</title>
+        <title>Urban Gardening</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -15,17 +15,34 @@
                     {% block content %}
                         <div class="Willkommen">
                             <h3>Herzlich Willkommen auf meinem Blog </h3>
-                            <p>Mein Name ist Susan. Ich bin 22 Jahre alt und aktuelle Masterandin an der Freien Universität zu Berlin. <br /> Schon seit langem ist mir klar geworden wie wichtig es ist, die Umwelt zu schützen. <br /> Daher habe ich diesen Blog errichtet, um Menschen
+                            <p>Mein Name ist Susan. Ich bin 24 Jahre alt und aktuelle Masterandin an der Freien Universität zu Berlin. <br /> Schon seit langem ist mir klar geworden wie wichtig es ist, die Umwelt zu schützen. <br /> Daher habe ich diesen Blog errichtet, um Menschen
                             darauf aufmerksam zu machen, wie sie mit kleinen aber einfachen Tricks die Umwelt schützen können. </p>
                             <p>Ich freue mich euch alle kennenzulernen!</p>
                         </div>
-                        <div class="AktuellerBlog">
-                            <h3>Aktuelle Blogeinträge</h3>
-                            <p>Hier findet Ihr aktuell die neuesten 3 Blogeinträge. Vergesst nicht: SHARING IS CARING🤗</p>
-                            <p>(Am besten sollten jetzt hier die Bilder und Überscrhiften gezeigt werden, die dann auf den Blog weiterleiten)</p>
-                        </div>
-                        <div class="Aktuelles">
+                        
+                        <div class="Willkommen">
                             <h3>Aktuelles</h3>
                             <p>Sehr wichtige Informationen</p>
                         </div>
+                            
+                            {% for post in posts %}
+                        <div class="post">
+                            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titel }}</a></h2>
+                            <p>{{ post.text|linebreaksbr }}</p>
+                            {% if post.bild %}
+                            <div class="bild">
+                            <img src="{{ post.bild.url }}" width="25%" height="auto"> <!--Bild anzeigen lassen mit 25% Größe auf der linken Seite des Kastens-->
+                            </div>
+                            {% endif %}
+                            <div class="author">
+                                {{ post.author|linebreaksbr }}
+                            </div>
+                            <div class="date">
+                                {{ post.published_date }}
+                            </div>
+                        </div>
+                        {% endfor %} 
+
+                                                
+                        
                     {% endblock %}

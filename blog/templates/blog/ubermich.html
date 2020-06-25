@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+<html>
+    <head>
+        <title>Urban Gardening</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                        <div class="Willkommen">
+                            <img src="https://cdn.pixabay.com/photo/2016/01/19/17/19/young-woman-1149643_1280.jpg", width="100%" height="auto"/>
+                            <h3>Wer bin ich? </h3>
+                            <p>Mein Name ist Susan. Ich bin 24 Jahre alt und studiere Nachhaltiges Management an der Freien Universität zu Berlin. 
+                                Ich bin politisch stark engagiert und setzte mich für das Verbreiten von nachhhaltigen Denkweisen und Lebensweisen ein. 
+                                In meiner Freizeit unterstütze ich häufig nachhhaltige Projekte und partizipiere an Umweltdemonstrationen.
+                                Mit diesem Blog möchte ich euch gerne inspirieren ein Bewusstsein für Nachhaltigkeit zu entwicklen und unsere Städte grüner zu gestalten. 
+                                <br> <br> Meine Ziele:
+                            </p>
+                            <ul>
+                                <li>Euch für Nachhaltigkeit begeistern</li>
+                                <li>Lifehacks und Tipps bezüglich Urban Gardening</li>
+                                <li>Ökologischen Fußabdruck minimieren</li>
+                                <li>Natur schätzen zu lernen</li>
+                                <li>Nachhaltigkeit in die Politik tragen</li>
+                                <li>Informationen zu anstehenden politischen Events verbreiten</li>
+                              </ul>
+                        </div>
+                        
+                                                
+                        
+                    {% endblock %}
