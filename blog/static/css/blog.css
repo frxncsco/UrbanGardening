@@ -20,7 +20,7 @@ h3 {
     font-style: normal;
     font-family: 'Times New Roman', Times, serif;
     font-weight: normal;
-    font-size: 20pt;
+    font-size: 100pt;
 }
 
 header {
@@ -186,7 +186,7 @@ div {
 #########################################################################################################
                                     Different Screen Sizes
 #########################################################################################################
-*/
+*/ 
 @media (max-width: 1800px) {
     .page-header {
         padding: 100px;
@@ -376,7 +376,7 @@ div {
         padding: 0px 0px;
     }
     
-    /*Startseiten Elemente*/ 
+    /*Startseiten Elemente*/
     
     .willkommen {
         padding: 10px 20px;
