@@ -6,24 +6,29 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+
     </head>
     <body>
         <div class="Titel">
             <h1>Urban Gardening</h1>
         </div>
         <header>
-            <nav >
-                <ul class="Menuband">
-                    <li><a href="{% url 'startseite' %}">STARTSEITE</a></li>
-                    <li><a href="{% url 'post_list' %}">BLOG</a></li>
-                    <li><a href="{% url 'ubermich' %}">ÜBER MICH</a></li>
-                </ul>
-            </nav>                
+            <div class="nav">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle"/>
+                <div class="menu">
+                    <a href="{% url 'startseite' %}">Startseite</a>
+                    <a href="{% url 'post_list' %}">Blog</a>
+                    <a href="{% url 'ubermich' %}">Über mich</a>
+                </div>
+            </div>
+
         </header>
         {% if user.is_authenticated %}
             <div class="Blogeintrag">
                 <h4>
-                    <a href="{% url 'post_new' %}"><button>BLOGEINTRAG HINZUFÜGEN</button></a>
+                    <a href="{% url 'post_new' %}"><button>Blogeintrag hinzufügen</button></a>
                 </h4>
             </div>
         {% endif %}
