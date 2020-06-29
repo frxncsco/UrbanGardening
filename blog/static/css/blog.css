@@ -3,7 +3,7 @@
     background-image:url("https://cdn.pixabay.com/photo/2017/04/07/13/16/leaf-2210973_960_720.jpg");
     background-size: 100% Auto;
     margin-top: 0;
-    padding: 40;
+    padding: 40px;
     margin-bottom: 0px;   
 }
 
@@ -19,8 +19,15 @@ h1 {
 h3 {
     font-style: normal;
     font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 30pt;
+    color: black;
+}
+h4 {
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
-    font-size: 100pt;
+    font-size: 16pt;
 }
 
 header {
@@ -114,7 +121,7 @@ button:hover {
 
 .post h2 a{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 22pt;
+    font-size: 30pt;
     font-weight: bold;
     color: black;
     
@@ -215,8 +222,8 @@ div {
     h1 {
         font-style: normal;
         font-family: 'Times New Roman', Times, serif;
-        font-weight: normal;
-        font-size: 30pt;
+        font-weight: bold;
+        font-size: 35pt;
         text-align: center;
         color: black;
     }
@@ -224,8 +231,15 @@ div {
     h3 {
         font-style: normal;
         font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 20pt;
+    }
+
+    h4 {
+        font-style: normal;
+        font-family: Arial, Helvetica, sans-serif;
         font-weight: normal;
-        font-size: 40pt;
+        font-size: 16pt;
     }
     
     header {
@@ -248,11 +262,11 @@ div {
     
     .Menuband li {
         display: inline-block;
-        padding: 0px 30px;
+        padding: 0px 8px;
         color: rgb(66, 41, 41);
         font-family: Arial, Helvetica, sans-serif;
         font-weight: normal;
-        font-size: 18px;
+        font-size: 16px;
         text-decoration: none;
     }
     
