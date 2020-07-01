@@ -88,9 +88,8 @@ span {
     color: black;
 }
 label {
-
-    font-size: 26px;
-    line-height: 40px;
+    font-size: 40px;
+    line-height: 50px;
     display: none;
     width: 100px;
     float: right;
@@ -109,7 +108,7 @@ label {
         font-size: 20px;
         width: 200%;
         display: none;
-        background-color: lightgrey;
+        background-color: yellowgreen;
         border-radius: 10px;
         padding-bottom: 20px;
     }
@@ -242,7 +241,7 @@ p {
         background-image: url("https://cdn.pixabay.com/photo/2017/04/07/13/16/leaf-2210973_960_720.jpg");
         background-size: 100% Auto;
         margin-top: 0;
-        padding: 40;
+        padding: 40px;
         margin-bottom: 0px;
     }
 
@@ -299,5 +298,10 @@ p {
         font-size: 14pt;
         color: black;
     }
-
+    .post h2 a {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20pt;
+        font-weight: bold;
+        color: black;
+    }
 }
