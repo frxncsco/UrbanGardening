@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        <h2> {{ event.eventtitel }} </h2>
+        <p>{{ event.beschreibung|linebreaksbr }}</p>
+
+        <div class="author"> 
+           ({{event.veranstaltungsort}})
+        </div>
+        {% if event.published_date2 %}
+            <div class="date">
+                {{ event.published_date2}}
+            </div>
+        {% endif %}
+        <div class="date">
+        {% if user.is_authenticated %}
+        <a class="btn btn-default" href="{% url 'event_edit' pk=event.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}

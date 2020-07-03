@@ -19,3 +19,18 @@ class Post(models.Model):
 
     def __str__(self):
         return self.titel
+
+class Event(models.Model):
+    eventtitel= models.CharField(max_length=200)
+    beschreibung = models.TextField()
+    veranstaltungsort = models.CharField(max_length=100)
+    published_date2 = models.DateTimeField(blank=True, null=True)
+    veranstaltungsdatum = models.DateField()
+  
+
+    def publish(self):
+        self.published_date2 = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.eventtitel

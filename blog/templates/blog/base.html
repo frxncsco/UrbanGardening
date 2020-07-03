@@ -1,4 +1,5 @@
 {% load static %}
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <html>
     <head>
         <title>Urban Gardening</title>
@@ -21,6 +22,7 @@
                     <a href="{% url 'startseite' %}">Startseite</a>
                     <a href="{% url 'post_list' %}">Blog</a>
                     <a href="{% url 'ubermich' %}">Über mich</a>
+                    <a href="{% url 'events' %}">Events</a>
                 </div>
             </div>
 
@@ -29,6 +31,7 @@
             <div class="Blogeintrag">
                 <h4>
                     <a href="{% url 'post_new' %}"><button>Blogeintrag hinzufügen</button></a>
+                    <a href="{% url 'event_new' %}"><button>Event hinzufügen</button></a>
                 </h4>
             </div>
         {% endif %}

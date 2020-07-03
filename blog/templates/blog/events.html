@@ -1,0 +1,32 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+<html>
+    <head>
+        <title>Urban Gardening</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                        {% for event in events %}
+                        <div class = "post">
+                            <h2><a href="{% url 'event_detail' pk=event.pk %}">{{event.eventtitel }}</a></h2>
+                            <p>{{ event.veranstaltungsort|linebreaksbr }}</p>
+                            <p>{{ event.beschreibung|linebreaksbr }}</p>
+                            <p>{{ event.veranstaltungsdatum|linebreaksbr }}</p>
+                            <div class="date">
+                                {{ event.published_date2 }}
+                            </div>
+                        </div>
+                        {% endfor %} 
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
