@@ -6,6 +6,8 @@ from .forms import EventForm
 from .forms import PostForm
 from .models import Comment #KOMMENTAR
 from .forms import CommentForm #KOMMENTAR
+from .models import Kontakt #KONTAKT
+from .forms import ContactForm #KONTAKT
 from django.shortcuts import redirect
 # Create your views here.
 
@@ -26,6 +28,18 @@ def post_detail(request, pk):
     else: #KOMMENTAR
         form = CommentForm() #KOMMENTAR
     return render(request, 'blog/post_detail.html', {'post': post, 'comments': comments, 'new_comment': new_comment, 'form': form}) #KOMMENTAR
+
+def startseite(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:3]
+    new_kontakt = None #KONTAKT
+    if request.method == 'POST': #KONTAKT
+        form = ContactForm(request.POST) #KONTAKT
+        if form.is_valid(): #KONTAKT
+            new_kontakt = form.save (commit=False) #KONTAKT
+            new_kontakt.save() #KONTAKT
+    else: #KONTAKT
+        form = ContactForm() #KONTAKT
+    return render(request, 'blog/startseite.html',  {'posts': posts, 'form': form}) #KONTAKT
 
 
 def post_new(request):
@@ -92,6 +106,3 @@ def ubermich(request):
 #def urbangardening(request):
  #   return render(request, 'blog/urbangardening.html')
 
-def startseite(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:3]
-    return render(request, 'blog/startseite.html',  {'posts': posts})
