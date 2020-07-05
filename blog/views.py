@@ -4,6 +4,8 @@ from .models import Post
 from .models import Event
 from .forms import EventForm
 from .forms import PostForm
+from .models import Comment #KOMMENTAR
+from .forms import CommentForm #KOMMENTAR
 from django.shortcuts import redirect
 # Create your views here.
 
@@ -13,7 +15,18 @@ def post_list(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_detail.html', {'post': post})
+    comments = post.comments.filter(active=True) #KOMMENTAR
+    new_comment = None #KOMMENTAR
+    if request.method == 'POST': #KOMMENTAR
+        form = CommentForm(request.POST) #KOMMENTAR
+        if form.is_valid(): #KOMMENTAR
+            new_comment = form.save(commit=False) #KOMMENTAR
+            new_comment.post = post #KOMMENTAR
+            new_comment.save() #KOMMENTAR
+    else: #KOMMENTAR
+        form = CommentForm() #KOMMENTAR
+    return render(request, 'blog/post_detail.html', {'post': post, 'comments': comments, 'new_comment': new_comment, 'form': form}) #KOMMENTAR
+
 
 def post_new(request):
     if request.method == "POST":
