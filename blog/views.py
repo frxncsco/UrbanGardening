@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from .models import Post
 from .models import Event
-from .forms import EventForm
+from .forms import EventForm #EVENT
 from .forms import PostForm
 from .models import Comment #KOMMENTAR
 from .forms import CommentForm #KOMMENTAR
@@ -54,13 +54,17 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
+######################
+#      EVENT         #
+######################
+
 def event_detail(request, pk):
     event = get_object_or_404(Event, pk=pk)
     return render(request, 'blog/event_detail.html', {'event': event})
 
 def event_new(request):
-    if request.method == "EVENT":
-        form = EventForm(request.EVENT)
+    if request.method == "POST":
+        form = EventForm(request.POST)
         if form.is_valid():
             event = form.save(commit=False)
             event.publish()
@@ -71,8 +75,8 @@ def event_new(request):
 
 def event_edit(request, pk):
     event = get_object_or_404(Event, pk=pk)
-    if request.method == "EVENT":
-        form = EventForm(request.Event, instance=event) 
+    if request.method == "POST":
+        form = EventForm(request.POST, instance=event) 
         if form.is_valid():
             event = form.save(commit=False)
             event.published_date2 = timezone.now()
@@ -83,8 +87,12 @@ def event_edit(request, pk):
     return render(request, 'blog/event_edit.html', {'form': form})
 
 def events(request):
-    events = Event.objects.filter(published_date2__lte=timezone.now()).order_by('-published_date2')
+    events = Event.objects.filter(veranstaltungsdatum__gte=timezone.now()).order_by('veranstaltungsdatum')
     return render(request,'blog/events.html', {'events': events})
+
+######################
+#      ÜBER MICH     #
+######################
 
 def ubermich(request):
     return render(request, 'blog/ubermich.html')
@@ -92,6 +100,11 @@ def ubermich(request):
 #def urbangardening(request):
  #   return render(request, 'blog/urbangardening.html')
 
+######################
+#      START         #
+######################
+
 def startseite(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:3]
-    return render(request, 'blog/startseite.html',  {'posts': posts})
+    events = Event.objects.filter(veranstaltungsdatum__gte=timezone.now()).order_by('veranstaltungsdatum')[0:3]
+    return render(request, 'blog/startseite.html',  {'posts': posts}, {'events': events})

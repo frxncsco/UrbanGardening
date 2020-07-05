@@ -2,7 +2,7 @@ from django import forms
 from .models import Post
 from .models import Event
 from .models import Comment #KOMMENTAR
-from bootstrap_datepicker_plus import DateTimePickerInput
+from bootstrap_datepicker_plus import DateTimePickerInput 
 
 
 class PostForm(forms.ModelForm):
@@ -11,17 +11,25 @@ class PostForm(forms.ModelForm):
          model = Post
          fields = ('titel', 'text','bild', 'ort', 'alter') #Felder für Titel, Text, Alter, Bild, Ort als Formular angelegt
 
+######################
+#      EVENT         #
+######################
+
 
 class DateInput(forms.DateInput):
     input_type = 'date'
+
+class TimeInput(forms.TimeInput):
+    input_type = 'time'
 
 class EventForm(forms.ModelForm):
 
     class Meta:
          model = Event
-         fields = ('eventtitel','beschreibung','veranstaltungsort', 'veranstaltungsdatum')
+         fields = ('eventtitel','beschreibung','veranstaltungsort', 'veranstaltungsdatum', 'uhrzeit')
          widgets = {
             'veranstaltungsdatum': DateInput(), 
+            'uhrzeit': TimeInput(),
         }
 
 ######################

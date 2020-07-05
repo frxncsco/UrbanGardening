@@ -8,7 +8,7 @@ class Post(models.Model):
     titel = models.CharField(max_length=200)
     text = models.TextField()
     alter = models.CharField (max_length=10)#Anlage der Variable Alter mit entsprechendem Eingabefeld
-    bild = models.ImageField(default='images/default.jpg', upload_to= 'images/', blank = True ) #Anlage der Variable Bild mit entsprechendem Eingabefeld
+    bild = models.ImageField(default='default.PNG', upload_to= 'images/', blank = True ) #Anlage der Variable Bild mit entsprechendem Eingabefeld
     ort = models.CharField(max_length=100)#Anlage der Variable Ort mit entsprechendem Eingabefeld
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
@@ -20,12 +20,17 @@ class Post(models.Model):
     def __str__(self):
         return self.titel
 
+######################
+#      EVENT         #
+######################
+
 class Event(models.Model):
     eventtitel= models.CharField(max_length=200)
     beschreibung = models.TextField()
     veranstaltungsort = models.CharField(max_length=100)
     published_date2 = models.DateTimeField(blank=True, null=True)
-    veranstaltungsdatum = models.DateField()
+    veranstaltungsdatum = models.DateField(default="")
+    uhrzeit = models.TimeField(default="")
   
 
     def publish(self):

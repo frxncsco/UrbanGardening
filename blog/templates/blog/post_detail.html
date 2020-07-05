@@ -26,8 +26,11 @@
      <!--Kommentarfunktion -->
         <div class="Kommentare1">
          <!-- Ansicht bisheriger Kommentare -->
-            <h3>{{ comments.count }} Kommentare</h3>
-      
+         {% if  comments.count == 1 %}
+            <h3>{{ comments.count }} Kommentar</h3>
+        {% else %}
+        <h3>{{ comments.count }} Kommentare</h3>
+        {% endif %}
             {% for comment in comments %}
             <div class="comments">
                 <h4>{{ comment.name }}</h4>
