@@ -21,5 +21,40 @@
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %}
         </div>
+    </div>   
+    <div class="Kommentare">
+     <!--Kommentarfunktion -->
+        <div class="Kommentare1">
+         <!-- Ansicht bisheriger Kommentare -->
+            <h3>{{ comments.count }} Kommentare</h3>
+      
+            {% for comment in comments %}
+            <div class="comments">
+                <h4>{{ comment.name }}</h4>
+                <p>{{ comment.body | linebreaks }}</p>
+
+                <div class="created_on">
+                    {{ comment.created_on }}
+                </div>            
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="Kommentarverfassen">
+     <!-- Nachricht wenn man bereits Kommentar verfasst hat-->
+        <div class="NeuesKommentar">
+            {% if new_comment %}
+            <div class="alert-success" role="alert">
+                Dein Kommentar wird geprüft. Schaue später nochmal vorbei :)
+            </div>
+            {% else %}
+             <!-- Kommentar Hinzufügen-->
+            <h3>Hinterlasse ein Kommentar</h3>
+            <form method="POST" class="comment.form">{% csrf_token %} 
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+            </form>
+            {% endif %}
+        </div>
     </div>
 {% endblock %}

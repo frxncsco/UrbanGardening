@@ -1,6 +1,7 @@
 from django import forms
 from .models import Post
 from .models import Event
+from .models import Comment #KOMMENTAR
 from bootstrap_datepicker_plus import DateTimePickerInput
 
 
@@ -22,3 +23,13 @@ class EventForm(forms.ModelForm):
          widgets = {
             'veranstaltungsdatum': DateInput(), 
         }
+
+######################
+#      Kommentar     #
+######################
+
+class CommentForm(forms.ModelForm):
+    
+    class Meta:
+        model = Comment
+        fields = ('name', 'email', 'body')
