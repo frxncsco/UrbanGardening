@@ -30,8 +30,8 @@
                             {% endfor %}  
                         </div>        
                                             
-                        <div class="post">
                             {% for post in posts %}
+                        <div class="post">
                             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titel }}</a></h2>
                             <p>{{ post.text|linebreaksbr }}</p>
                             {% if post.bild.url != '/media/default.PNG' %}
@@ -45,26 +45,8 @@
                             <div class="date">
                                 {{ post.published_date }}
                             </div>
-                            {% endfor %}
                         </div>
-
-                        <div class="Nachrichtverfassen">
-                            <!-- Nachricht wenn man bereits Nachrich verschickt hat-->
-                            <div class="NeueNachricht">
-                                {% if new_kontakt %}
-                                <div class= "alert-success" role="alert">
-                                    Vielen Dank für deine Nachricht! Ich werde mich in den nächsten Tagen bei dir melden! :)
-                                </div>
-                                {% else %}
-                                <!-- Nachricht an Susan schreiben-->
-                                <h3>Schreibe mir gerne eine Nachricht</h3>
-                                <form method="POST" class="contact.form">{% csrf_token %} 
-                                    {{ form.as_p }}
-                                    <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
-                                </form>
-                                {% endif %}
-                            </div>
-                        </div>
+                        {% endfor %}   
                     {% endblock %}
                 </div>
             </div>
