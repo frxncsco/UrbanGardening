@@ -13,9 +13,13 @@
                 {{ post.published_date}}
             </div>
         {% endif %}
+
+        {% if post.bild.url != 'default.PNG' %}
         <div class="date">
             <img src="{{ post.bild.url }}" width="100%" height="auto" /> <!-- Bild anzeigen lassen in 100% größe in der Mitte des Kastens-->
         </div>
+        {% endif %}
+        
         <div class="date">
         {% if user.is_authenticated %}
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
