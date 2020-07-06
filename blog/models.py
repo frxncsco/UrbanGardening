@@ -51,7 +51,7 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.body, self.name)
+        return 'Kommentar von {}: {}'.format(self.name, self.body)
 
 ######################
 #      Kontakt     #
