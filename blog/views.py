@@ -39,7 +39,7 @@ def startseite(request):
             new_kontakt.save() #KONTAKT
     else: #KONTAKT
         form = ContactForm() #KONTAKT
-    return render(request, 'blog/startseite.html',  {'posts': posts, 'form': form}) #KONTAKT
+    return render(request, 'blog/startseite.html',  {'posts': posts, 'form': form, 'new_kontakt': new_kontakt}) #KONTAKT
 
 
 def post_new(request):
