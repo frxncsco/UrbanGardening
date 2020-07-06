@@ -16,16 +16,14 @@ div {
     padding: 0px 0px;
 }
 
-
 .willkommen {
     padding: 10px 20px;
     margin-bottom: 40px;
     background-color: white;
 }
 
-
 .Titel {
-    background: blanchedalmond;
+    background: yellowgreen;
     background-image:url("https://cdn.pixabay.com/photo/2017/04/07/13/16/leaf-2210973_960_720.jpg");
     background-size: 100% Auto;
     margin-top: 0;
@@ -58,17 +56,15 @@ h4 {
 
 header {
     justify-content: center;
-    padding: 10px 15%;
     background:white;
     position: sticky;
     display: flex;
     top: 0px;
     width: 100%;
     height: 140px;
-    line-height: 100px;
+    line-height: 120px;
     z-index: 99999;
 }
-
 
 .Blogeintrag {
     display: flex;
@@ -103,7 +99,7 @@ button:hover {
 .content-container {
     display: flex;
     justify-content: center;
-    background: whitesmoke; 
+   /*  background: whitesmoke;  */
 }
 
 .row {
@@ -117,7 +113,6 @@ button:hover {
     padding: 10px 20px;
     margin-bottom: 40px; 
     background-color: white;
-    
     width: 100%;
 }
 
@@ -125,8 +120,13 @@ button:hover {
     font-family: 'Times New Roman', Times, serif;
     font-size: 30pt;
     font-weight: bold;
-    color: black;
-    
+    color: black;  
+}
+.post h4 a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16pt;
+    font-weight: bold;
+    color:  yellowgreen;
 }
 
 .post h2:hover {
@@ -134,7 +134,6 @@ button:hover {
 }
 
 .post-form textarea, .post-form input {
-
     width: 100%;
 }
 
@@ -164,29 +163,71 @@ p {
 
 .save {
     float: right;
+    border-color:gray;
+    margin-bottom: 20px;
 }
-
+/* Button zur Adminseite*/
+.adminseite button {
+    padding: 5px 12px;
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-top: 100px;
+}
+.adminseite {
+    display: flex;
+    justify-content: center;
+    padding: 0px 15%;
+    top: 100px;
+    z-index: 9999;
+}
+.adminseite a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 12pt;
+    color: black;
+}
 /*
 #########################################################################################################
                                     Kommentare
 #########################################################################################################
 */
 
-.Kommentare {
+.Kommentare h3 {
     padding: 10px 20px;
     margin-bottom: 40px;
-    background-color: blue;
     width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16pt;
+    text-align: right;
 }
+.neueskommentar h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+}
+.comments{
+    background-color:white;
+    padding: 10px 20px;
+}
+.created_on{
+    text-align: right;
+    color: gray;
+}
+.comments h4{
+    color: yellowgreen;
+}
+.kommentarverfassen{
+    margin-top: 50px;
+}
+
  .Kommentatverfassen {
     padding: 10px 20px;
     margin-bottom: 40px;
     background-color: greenyellow;
     width: 100%;
 }
-
-
-
 
 /*
 #########################################################################################################
@@ -199,7 +240,7 @@ p {
 }
 .navbar-nav li a {
     color: black !important;
-    font-size: 20px !important;
+    font-size: 24px !important;
     background-color: white !important;
     text-align: center !important;
 }
@@ -222,7 +263,7 @@ p {
     }
 
     .Titel {
-        background: blanchedalmond;
+        background: yellowgreen;
         background-image: url("https://cdn.pixabay.com/photo/2017/04/07/13/16/leaf-2210973_960_720.jpg");
         background-size: 100% Auto;
         margin-top: 0;

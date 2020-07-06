@@ -22,14 +22,19 @@
                         
                         <div class="Willkommen">
                             <h3>Aktuelles</h3>
-                            <p>Sehr wichtige Informationen</p>
-                        </div>
-                            
-                        {% for post in posts %}
+                            {% for event in events %}
+                            <div class = "post">
+                                <h4><a href="{% url 'event_detail' pk=event.pk %}">{{event.eventtitel }}</a></h4>
+                                <p>{{ event.veranstaltungsort}}, am: {{ event.veranstaltungsdatum}}</p>
+                            </div>
+                            {% endfor %}  
+                        </div>        
+                                            
                         <div class="post">
+                            {% for post in posts %}
                             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titel }}</a></h2>
                             <p>{{ post.text|linebreaksbr }}</p>
-                            {% if post.bild %}
+                            {% if post.bild.url != '/media/default.PNG' %}
                             <div class="bild">
                             <img src="{{ post.bild.url }}" width="60%" height="auto"> <!--Bild anzeigen lassen mit 25% Größe auf der linken Seite des Kastens-->
                             </div>
@@ -40,9 +45,9 @@
                             <div class="date">
                                 {{ post.published_date }}
                             </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
-                        
+
                         <div class="Nachrichtverfassen">
                             <!-- Nachricht wenn man bereits Nachrich verschickt hat-->
                             <div class="NeueNachricht">

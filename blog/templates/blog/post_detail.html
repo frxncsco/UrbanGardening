@@ -13,9 +13,13 @@
                 {{ post.published_date}}
             </div>
         {% endif %}
+
+        {% if post.bild.url != '/media/default.PNG' %}
         <div class="date">
             <img src="{{ post.bild.url }}" width="100%" height="auto" /> <!-- Bild anzeigen lassen in 100% größe in der Mitte des Kastens-->
         </div>
+        {% endif %}
+        
         <div class="date">
         {% if user.is_authenticated %}
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
@@ -26,12 +30,15 @@
      <!--Kommentarfunktion -->
         <div class="Kommentare1">
          <!-- Ansicht bisheriger Kommentare -->
-            <h3>{{ comments.count }} Kommentare</h3>
-      
+         {% if  comments.count == 1 %}
+            <h3>{{ comments.count }} Kommentar</h3>
+        {% else %}
+        <h3>{{ comments.count }} Kommentare</h3>
+        {% endif %}
             {% for comment in comments %}
             <div class="comments">
                 <h4>{{ comment.name }}</h4>
-                <p>{{ comment.body | linebreaks }}</p>
+                <p>{{ comment.kommentartext | linebreaks }}</p>
 
                 <div class="created_on">
                     {{ comment.created_on }}
@@ -45,14 +52,14 @@
         <div class="NeuesKommentar">
             {% if new_comment %}
             <div class="alert-success" role="alert">
-                Dein Kommentar wird geprüft. Schaue später nochmal vorbei :)
+                Dein Kommentar wird geprüft. Bitte schau später nochmal vorbei :)
             </div>
             {% else %}
              <!-- Kommentar Hinzufügen-->
             <h3>Hinterlasse ein Kommentar</h3>
-            <form method="POST" class="comment.form">{% csrf_token %} 
+            <form method="POST" class="post-form">{% csrf_token %} 
                 {{ form.as_p }}
-                <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+                <button type="submit" class="save btn btn-default">Speichern</button>
             </form>
             {% endif %}
         </div>
