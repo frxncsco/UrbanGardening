@@ -34,7 +34,7 @@
                         <div class="post">
                             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titel }}</a></h2>
                             <p>{{ post.text|linebreaksbr }}</p>
-                            {% if post.bild %}
+                            {% if post.bild.url != '/media/default.PNG' %}
                             <div class="bild">
                             <img src="{{ post.bild.url }}" width="60%" height="auto"> <!--Bild anzeigen lassen mit 25% Größe auf der linken Seite des Kastens-->
                             </div>
