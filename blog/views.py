@@ -97,14 +97,11 @@ def events(request):
 def ubermich(request):
     return render(request, 'blog/ubermich.html')
 
-#def urbangardening(request):
- #   return render(request, 'blog/urbangardening.html')
-
 ######################
 #      START         #
 ######################
 
 def startseite(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:3]
     events = Event.objects.filter(veranstaltungsdatum__gte=timezone.now()).order_by('veranstaltungsdatum')[0:3]
-    return render(request, 'blog/startseite.html',  {'posts': posts}, {'events': events})
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:3]
+    return render(request, 'blog/startseite.html',  {'events': events,'posts': posts})
