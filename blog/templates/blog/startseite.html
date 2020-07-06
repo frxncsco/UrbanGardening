@@ -28,8 +28,8 @@
                                 <p>Veranstaltungsort: {{ event.veranstaltungsort}}, Datum: {{ event.veranstaltungsdatum}}, {{ event.uhrzeit|linebreaksbr }} Uhr</p>
                             </div>
                             {% endfor %}  
-
-                        </div>                            
+                        </div>        
+                                            
                             {% for post in posts %}
                         <div class="post">
                             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titel }}</a></h2>
@@ -46,7 +46,7 @@
                                 {{ post.published_date }}
                             </div>
                         </div>
-                        {% endfor %}     
+                        {% endfor %}   
                     {% endblock %}
                 </div>
             </div>
