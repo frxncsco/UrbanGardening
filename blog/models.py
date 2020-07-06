@@ -55,5 +55,22 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.kommentartext, self.name)
+        return 'Kommentar von {}: {}'.format(self.name, self.body)
+
+######################
+#      Kontakt     #
+######################
+
+class Kontakt(models.Model):
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    nachricht = models.TextField()
+    created_on_day = models.DateTimeField(auto_now_add=True)
+
+
+    class Meta:
+        ordering = ['created_on_day']
+
+    def __str__(self):
+        return 'Nachricht von {}: {}'.format(self.name, self.nachricht)
 

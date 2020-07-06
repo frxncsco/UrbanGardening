@@ -221,6 +221,14 @@ p {
 .kommentarverfassen{
     margin-top: 50px;
 }
+
+ .Kommentatverfassen {
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    background-color: greenyellow;
+    width: 100%;
+}
+
 /*
 #########################################################################################################
                                     Menü
