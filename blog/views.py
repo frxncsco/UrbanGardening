@@ -6,6 +6,7 @@ from .forms import EventForm #EVENT
 from .forms import PostForm
 from .models import Comment #KOMMENTAR
 from .forms import CommentForm #KOMMENTAR
+from .forms import ContactForm #KOMMENTAR
 from django.shortcuts import redirect
 # Create your views here.
 
@@ -104,4 +105,12 @@ def ubermich(request):
 def startseite(request):
     events = Event.objects.filter(veranstaltungsdatum__gte=timezone.now()).order_by('veranstaltungsdatum')[0:3]
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:3]
-    return render(request, 'blog/startseite.html',  {'events': events,'posts': posts})
+    new_kontakt = None #KONTAKT
+    if request.method == 'POST': #KONTAKT
+        form = ContactForm(request.POST) #KONTAKT
+        if form.is_valid(): #KONTAKT
+            new_kontakt = form.save (commit=False) #KONTAKT
+            new_kontakt.save() #KONTAKT
+    else: #KONTAKT
+        form = ContactForm() #KONTAKT
+    return render(request, 'blog/startseite.html',  {'events': events,'posts': posts,'form': form,'new_kontakt': new_kontakt}) #KONTAKT})

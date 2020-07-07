@@ -16,7 +16,7 @@
                         {% for event in events %}
                         <div class = "post">
                             <h2><a href="{% url 'event_detail' pk=event.pk %}">{{event.eventtitel }}</a></h2>
-                            <p>Veranstaltungsort: {{ event.veranstaltungsort}}, Datum: {{ event.veranstaltungsdatum}}, {{ event.uhrzeit|linebreaksbr }} Uhr</p>
+                            <p>{{ event.veranstaltungsort}} am {{ event.veranstaltungsdatum}}</p>
                             <p>{{ event.beschreibung|linebreaksbr }}</p>
                             <div class="date">
                                 {{ event.published_date2 }}

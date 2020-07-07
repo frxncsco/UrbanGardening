@@ -221,6 +221,13 @@ p {
 .kommentarverfassen{
     margin-top: 50px;
 }
+/* Nachrichten*/
+
+.Nachrichtverfassen h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18pt;
+}
+
 /*
 #########################################################################################################
                                     Menü
