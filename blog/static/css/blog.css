@@ -249,7 +249,7 @@ button:hover {
 }
 /*
 #########################################################################################################
-                                    Kommentare sticky top margin set-index 99999
+                                    Kommentare
 #########################################################################################################
 */
 
@@ -320,12 +320,6 @@ button:hover {
         color: black;
     }
 
-    .post h2 a {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 20pt;
-        font-weight: bold;
-        color: black;
-    }
 
     .Blogeintrag button {
         display: block;
@@ -363,6 +357,14 @@ button:hover {
         font-weight: bold;
         font-size: 35pt;
         text-align: center;
+        color: black;
+    }
+
+
+    .post h2 a {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20pt;
+        font-weight: bold;
         color: black;
     }
 
