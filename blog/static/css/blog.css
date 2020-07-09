@@ -1,4 +1,9 @@
 
+/*
+#########################################################################################################
+                                    Allgemeiner Body
+#########################################################################################################
+*/
 body,html {
     background-color: whitesmoke;
     align-items: center;
@@ -16,19 +21,15 @@ div {
     padding: 0px 0px;
 }
 
-.willkommen {
-    padding: 10px 20px;
-    margin-bottom: 40px;
-    background-color: white;
-}
-
-.Titel {
-    background: yellowgreen;
-    background-image:url("https://cdn.pixabay.com/photo/2017/04/07/13/16/leaf-2210973_960_720.jpg");
-    background-size: 100% Auto;
-    margin-top: 0;
-    padding: 40px;
-    margin-bottom: 0px;   
+/*
+#########################################################################################################
+                                    Schriften
+#########################################################################################################
+*/
+p {
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 h1 {
@@ -54,9 +55,16 @@ h4 {
     font-size: 16pt;
 }
 
+/*
+#########################################################################################################
+                                    Header
+#########################################################################################################
+*/
+
 header {
     justify-content: center;
     background:white;
+
     position: sticky;
     display: flex;
     top: 0px;
@@ -66,8 +74,51 @@ header {
     z-index: 99999;
 }
 
+.willkommen {
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    background-color: white;
+}
+
+.Titel {
+    background: yellowgreen;
+    background-image:url("https://cdn.pixabay.com/photo/2017/04/07/13/16/leaf-2210973_960_720.jpg");
+    background-size: 100% Auto;
+    margin-top: 0;
+    padding: 40px;
+    margin-bottom: 0px;
+}
+
+/*
+#########################################################################################################
+                                    Menü
+#########################################################################################################
+*/
+
+.navbar{
+    border-radius: 0;
+    margin-bottom: 0 !important;
+    padding: 0 0 !important;
+}
+.navbar-nav li a {
+    color: black !important;
+    font-size: 24px !important;
+    background-color: white !important;
+    text-align: center !important;
+}
+.collapse .navbar-collapse {
+    border-style: solid;
+    border-color: grey !important;
+}
+
+/*
+#########################################################################################################
+                                    Button zum Blogeintrag und Event hinzufügen
+#########################################################################################################
+*/
+
 .Blogeintrag {
-    display: flex;
+    display: flex ;
     justify-content: center;
     background: white;
     padding: 0px 15%;
@@ -96,6 +147,12 @@ button:hover {
     background-color: grey;
 }
 
+
+/*
+#########################################################################################################
+                                    Post & Event mit deren Eigenschaften
+#########################################################################################################
+*/
 .content-container {
     display: flex;
     justify-content: center;
@@ -137,12 +194,6 @@ button:hover {
     width: 100%;
 }
 
-p {
-    font-size: 12pt;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-}
-
 .date {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
@@ -166,7 +217,14 @@ p {
     border-color:gray;
     margin-bottom: 20px;
 }
-/* Button zur Adminseite*/
+
+
+
+/*
+#########################################################################################################
+                                    Button zur Adminseite
+#########################################################################################################
+*/
 .adminseite button {
     padding: 5px 12px;
     background-color: yellowgreen;
@@ -191,7 +249,7 @@ p {
 }
 /*
 #########################################################################################################
-                                    Kommentare
+                                    Kommentare sticky top margin set-index 99999
 #########################################################################################################
 */
 
@@ -228,35 +286,64 @@ p {
     font-size: 18pt;
 }
 
-/*
-#########################################################################################################
-                                    Menü
-#########################################################################################################
-*/
 
-.navbar{
-    border-radius: 0;
-}
-.navbar-nav li a {
-    color: black !important;
-    font-size: 24px !important;
-    background-color: white !important;
-    text-align: center !important;
-}
-.collapse .navbar-collapse {
-    border-style: solid;
-    border-color: grey !important;
-}
 
 /*
 #########################################################################################################
-                                    Different Screen Sizes
+                                    Unterschiedliche Bildschirmgrößen
 #########################################################################################################
 */ 
 
 
 /*Mobil Version*/
 @media (max-width: 650px) {
+
+    /*########### Schriftgröße im Menü anpassen bis Burgermenü erscheint ###########*/
+    .navbar-nav li a {
+        font-size: 18px !important;
+    }
+
+    /*########### Buttons Blog und Event hinzufügen ###########*/
+     .Blogeintrag {
+        display: flex;
+        background: white;
+        padding: 0px 15%;
+        position: sticky;
+        top: 100px;
+        z-index: 9999;
+    }
+
+    .Blogeintrag a {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        font-size: 12pt;
+        color: black;
+    }
+
+    .post h2 a {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20pt;
+        font-weight: bold;
+        color: black;
+    }
+
+    .Blogeintrag button {
+        display: block;
+        position: sticky;
+        padding: 8px 25px;
+        background-color: yellowgreen;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        margin-bottom: 5px;
+    }
+
+    button:hover {
+        background-color: grey;
+    }
+
+    /*########### Schriftanpassung ###########*/
     .page-header {
         padding: 20px;
     }
@@ -286,11 +373,11 @@ p {
         font-size: 20pt;
     }
 
-    h4 {
+    h4 a {
         font-style: normal;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: normal;
-        font-size: 16pt;
+        font-size: 12pt;
     }
 
     header {
@@ -307,26 +394,32 @@ p {
 
     }
 
-    .Blogeintrag {
-        display: flex;
-        justify-content: center;
-        background: white;
-        padding: 0px 15%;
-        position: sticky;
-        top: 100px;
-        z-index: 9999;
+
+/*############## Anpassung des Hamburgermenü #####################*/
+
+@media (max-width: 575px) {
+
+    /*########### Menü ###########*/
+    .navbar{
+    border-radius: 0;
+    margin-bottom: 0 !important;
+    padding: 0 0 !important;
+    }
+    .navbar-nav li a {
+        color: white !important;
+        font-size: 18px !important;
+        background-color: darkgreen !important;
+        text-align: center !important;
+        padding-left: 100px  !important;
+        padding-right: 100px  !important;
+        padding-top: 0px  !important;
+        padding-bottom: 0px  !important;
+        opacity: 0.9 !important;
+    }
+    .collapse .navbar-collapse {
+        border-style: solid;
+        border-color: grey !important;
     }
 
-    .Blogeintrag a {
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: normal;
-        font-size: 14pt;
-        color: black;
-    }
-    .post h2 a {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 20pt;
-        font-weight: bold;
-        color: black;
-    }
+
 }
