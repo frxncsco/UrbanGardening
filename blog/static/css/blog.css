@@ -191,6 +191,7 @@ p {
 
 .navbar{
     border-radius: 0;
+    background-color: white;
 }
 .navbar-nav li a {
     color: black !important;
@@ -200,7 +201,7 @@ p {
 }
 .collapse .navbar-collapse {
     border-style: solid;
-    border-color: grey !important;
+    border-color:grey!important;
 }
 
 /*

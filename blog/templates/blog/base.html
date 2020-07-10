@@ -66,13 +66,13 @@
                 <div class="col-md-8">
                 {% block content %}
                 {% endblock %}
-                {% if user.is_authenticated %}
-                <div class="Blogeintrag">
-                    <h4>
-                       <a href="http://127.0.0.1:8000/admin/"><button>Zur Admin-Seite</button></a>
-                    </h4>
-                </div>
-                {% endif %}  
+                 {% if user.is_authenticated %}
+                         <div class="Blogeintrag">
+                             <h4>
+                                <a href="http://127.0.0.1:8000/admin/"><button>Zur Admin-Seite</button></a>
+                             </h4>
+                         </div>
+                         {% endif %}  
                 </div>
             </div>
         </div> 
