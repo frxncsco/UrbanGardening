@@ -2,6 +2,7 @@ from django import forms
 from .models import Post
 from .models import Event
 from .models import Comment #KOMMENTAR
+from .models import Kontakt #KONTAKT
 from bootstrap_datepicker_plus import DateTimePickerInput 
 
 
@@ -40,4 +41,14 @@ class CommentForm(forms.ModelForm):
     
     class Meta:
         model = Comment
-        fields = ('name', 'email', 'body')
+        fields = ('name', 'email', 'kommentartext')
+
+######################
+#      Kontakt     #
+######################
+
+class ContactForm(forms.ModelForm):
+
+    class Meta:
+        model = Kontakt
+        fields = ('name', 'email', 'nachricht')

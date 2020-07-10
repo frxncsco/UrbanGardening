@@ -32,7 +32,6 @@ class Event(models.Model):
     veranstaltungsdatum = models.DateField(default="")
     uhrzeit = models.TimeField(default="")
   
-
     def publish(self):
         self.published_date2 = timezone.now()
         self.save()
@@ -48,7 +47,7 @@ class Comment(models.Model):
     post = models.ForeignKey(Post,on_delete=models.CASCADE,related_name='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
-    body = models.TextField()
+    kommentartext = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)
 
@@ -56,5 +55,22 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.body, self.name)
+        return 'Kommentar von {}: {}'.format(self.kommentartext, self.name)
+
+######################
+#      Kontakt     #
+######################
+
+class Kontakt(models.Model):
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    nachricht = models.TextField()
+    created_on_day = models.DateTimeField(auto_now_add=True)
+
+
+    class Meta:
+        ordering = ['created_on_day']
+
+    def __str__(self):
+        return 'Nachricht von {}: {}'.format(self.name, self.nachricht)
 

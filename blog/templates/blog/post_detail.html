@@ -38,7 +38,7 @@
             {% for comment in comments %}
             <div class="comments">
                 <h4>{{ comment.name }}</h4>
-                <p>{{ comment.body | linebreaks }}</p>
+                <p>{{ comment.kommentartext | linebreaks }}</p>
 
                 <div class="created_on">
                     {{ comment.created_on }}
@@ -52,14 +52,14 @@
         <div class="NeuesKommentar">
             {% if new_comment %}
             <div class="alert-success" role="alert">
-                Dein Kommentar wird geprüft. Schaue später nochmal vorbei :)
+                Dein Kommentar wird geprüft. Bitte schau später nochmal vorbei :)
             </div>
             {% else %}
              <!-- Kommentar Hinzufügen-->
             <h3>Hinterlasse ein Kommentar</h3>
-            <form method="POST" class="comment.form">{% csrf_token %} 
+            <form method="POST" class="post-form">{% csrf_token %} 
                 {{ form.as_p }}
-                <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+                <button type="submit" class="save btn btn-default">Speichern</button>
             </form>
             {% endif %}
         </div>

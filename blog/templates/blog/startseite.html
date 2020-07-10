@@ -25,7 +25,7 @@
                             {% for event in events %}
                             <div class = "post">
                                 <h4><a href="{% url 'event_detail' pk=event.pk %}">{{event.eventtitel }}</a></h4>
-                                <p>Veranstaltungsort: {{ event.veranstaltungsort}}, Datum: {{ event.veranstaltungsdatum}}, {{ event.uhrzeit|linebreaksbr }} Uhr</p>
+                                <p>{{ event.veranstaltungsort}}, am: {{ event.veranstaltungsdatum}}</p>
                             </div>
                             {% endfor %}  
                         </div>        
@@ -34,7 +34,7 @@
                         <div class="post">
                             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titel }}</a></h2>
                             <p>{{ post.text|linebreaksbr }}</p>
-                            {% if post.bild %}
+                            {% if post.bild.url != '/media/default.PNG' %}
                             <div class="bild">
                             <img src="{{ post.bild.url }}" width="60%" height="auto"> <!--Bild anzeigen lassen mit 25% Größe auf der linken Seite des Kastens-->
                             </div>
@@ -47,7 +47,23 @@
                             </div>
                         </div>
                         {% endfor %}   
-                    {% endblock %}
+                    <div class="Nachrichtverfassen">
+                        <!-- Nachricht wenn man bereits Nachrich verschickt hat-->
+                        <div class="NeueNachricht">
+                            {% if new_kontakt %}
+                            <div class= "alert-success" role="alert">
+                                Vielen Dank für deine Nachricht! Ich werde mich in den nächsten Tagen bei dir melden! :)
+                            </div>
+                            {% else %}
+                            <!-- Nachricht an Susan schreiben-->
+                            <h3>Schreibe mir gerne eine Nachricht</h3>
+                            <form method="POST" class="contact.form">{% csrf_token %} 
+                                {{ form.as_p }}
+                                <button type="submit" class="btn btn-primary  btn-lg">Speichern</button>
+                            </form>
+                            {% endif %}
+                        </div>
+                        {% endblock %}
                 </div>
             </div>
         </div>
