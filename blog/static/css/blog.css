@@ -253,11 +253,6 @@ button:hover {
 #########################################################################################################
 */
 
-<<<<<<< HEAD
-.navbar{
-    border-radius: 0;
-    background-color: white;
-=======
 .Kommentare h3 {
     padding: 10px 20px;
     margin-bottom: 40px;
@@ -265,17 +260,11 @@ button:hover {
     font-family: 'Times New Roman', Times, serif;
     font-size: 16pt;
     text-align: right;
->>>>>>> b866c2c9af96ff93b1e9c680f960bcfd167e4b21
 }
 .neueskommentar h3{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20pt;
 }
-<<<<<<< HEAD
-.collapse .navbar-collapse {
-    border-style: solid;
-    border-color:grey!important;
-=======
 .comments{
     background-color:white;
     padding: 10px 20px;
@@ -286,7 +275,6 @@ button:hover {
 }
 .comments h4{
     color: yellowgreen;
->>>>>>> b866c2c9af96ff93b1e9c680f960bcfd167e4b21
 }
 .kommentarverfassen{
     margin-top: 50px;
@@ -436,4 +424,3 @@ button:hover {
     }
 
 
-}
