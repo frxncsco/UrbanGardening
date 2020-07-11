@@ -60,15 +60,6 @@
                 <div class="col-md-8">
                 {% block content %}
                 {% endblock %}
-<<<<<<< HEAD
-                 {% if user.is_authenticated %}
-                         <div class="Blogeintrag">
-                             <h4>
-                                <a href="http://127.0.0.1:8000/admin/"><button>Zur Admin-Seite</button></a>
-                             </h4>
-                         </div>
-                         {% endif %}  
-=======
                 {% if user.is_authenticated %}
                 <div class="adminseite">
                     <h4>
@@ -76,7 +67,6 @@
                     </h4>
                 </div>
                 {% endif %}  
->>>>>>> b866c2c9af96ff93b1e9c680f960bcfd167e4b21
                 </div>
             </div>
         </div> 

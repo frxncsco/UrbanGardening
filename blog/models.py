@@ -58,10 +58,10 @@ class Comment(models.Model):
         return 'Kommentar von {}: {}'.format(self.kommentartext, self.name)
 
 ######################
-#      Kontakt     #
+#      Messsage     #
 ######################
 
-class Kontakt(models.Model):
+class Message(models.Model):
     name = models.CharField(max_length=80)
     email = models.EmailField()
     nachricht = models.TextField()

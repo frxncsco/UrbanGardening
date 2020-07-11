@@ -3,7 +3,7 @@
 {% block content %}
     <div class="post">
         <h2> {{ event.eventtitel }} </h2>
-        <p>Veranstaltungsort: {{ event.veranstaltungsort}}, Datum: {{ event.veranstaltungsdatum}}, {{ event.uhrzeit|linebreaksbr }} Uhr</p>
+        <p>Veranstaltungsort: {{ event.veranstaltungsort}}, Datum: {{ event.veranstaltungsdatum}} um {{ event.uhrzeit|linebreaksbr }} Uhr</p>
         <p>{{ event.beschreibung|linebreaksbr }}</p>    
         {% if event.published_date2 %}
             <div class="date">
@@ -12,7 +12,7 @@
         {% endif %}
         <div class="date">
         {% if user.is_authenticated %}
-        <a class="btn btn-default" href="{% url 'event_edit' pk=event.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="edit btn btn-default" href="{% url 'event_edit' pk=event.pk %}"><span >Bearbeiten</span></a>
         {% endif %}
         </div>
     </div>
