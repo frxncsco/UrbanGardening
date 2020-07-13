@@ -63,7 +63,7 @@
                 {% if user.is_authenticated %}
                     <div class="adminseite">
                         <h4>
-                            <a href="http://127.0.0.1:8000/admin/"><button>zur Admin-Seite</button></a>
+                            <a href="{% url 'startseite' %}"><button>zur Admin-Seite</button></a>
                          </h4>
                     </div>  
                 {% endif %} 
@@ -73,7 +73,9 @@
         </div> 
     </body>
     <footer>
-        <h1>Urban Gardening - Blog</h1>
+        <h1>
+            <a href="">Urban Gardening - Blog</a>
+        </h1>
     </footer> 
 </html>
 
