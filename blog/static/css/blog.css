@@ -320,6 +320,14 @@ button:hover {
 #########################################################################################################
 */ 
 
+/*Anpassung Nachrichten*/
+@media (max-width: 1000px) {
+    .Nachrichtverfassen {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top:50px;
+    }
+}
 
 /*Mobil Version*/
 @media (max-width: 650px) {
@@ -452,5 +460,10 @@ button:hover {
     .collapse .navbar-collapse {
         border-style: solid;
         border-color: grey !important;
+    }
+    .Nachrichtverfassen {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top:50px;
     }
 }
