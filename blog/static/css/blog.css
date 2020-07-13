@@ -232,6 +232,7 @@ button:hover {
     float: right;
     border-color:grey;
     margin-bottom: 20px;
+    background-color: lightgray;
 }
 
 .edit {
@@ -311,6 +312,8 @@ button:hover {
     padding-left: 150px;
     padding-right: 150px;
     padding-top:50px;
+    padding-bottom: 50px;
+    background-color: darkgrey;
 }
 
 
