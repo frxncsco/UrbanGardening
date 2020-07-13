@@ -60,9 +60,14 @@ h4 {
 #########################################################################################################
 */
 footer {
-    margin-top: 0;
-    margin-left:-250;
-    margin-right:-225;
+    background-color: yellowgreen;
+    background-image: url("https://cdn.pixabay.com/photo/2017/04/07/13/16/leaf-2210973_960_720.jpg");
+    background-size: 100% Auto;
+}
+
+footer h1 {
+    padding: 10px;
+    font-size: 30;
 }
 /*
 #########################################################################################################
