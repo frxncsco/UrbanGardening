@@ -28,9 +28,9 @@
                                 <p>{{ event.veranstaltungsort}}, am: {{ event.veranstaltungsdatum}}</p>
                             </div>
                             {% endfor %}  
-                        </div>        
-                                            
-                            {% for post in posts %}
+                        </div>
+
+                        {% for post in posts %}
                         <div class="post">
                             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titel }}</a></h2>
                             <p>{{ post.text|linebreaksbr }}</p>
@@ -47,6 +47,7 @@
                             </div>
                         </div>
                         {% endfor %}   
+
                     <div class="Nachrichtverfassen">
                         <!-- Nachricht wenn man bereits Nachrich verschickt hat-->
                         <div class="NeueNachricht">
@@ -63,7 +64,8 @@
                             </form>
                             {% endif %}
                         </div>
-                        {% endblock %}
+                    </div>
+                    {% endblock %}
                 </div>
             </div>
         </div>
