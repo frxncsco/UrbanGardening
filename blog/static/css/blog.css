@@ -309,11 +309,13 @@ button:hover {
     font-size: 18pt;
 }
 .Nachrichtverfassen {
-    padding-left: 150px;
-    padding-right: 150px;
     padding-top:50px;
     padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: darkgrey;
+    border-left: darkgrey;
+    border-right: darkgrey;
 }
 
 
@@ -323,14 +325,6 @@ button:hover {
 #########################################################################################################
 */ 
 
-/*Anpassung Nachrichten*/
-@media (max-width: 1000px) {
-    .Nachrichtverfassen {
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top:50px;
-    }
-}
 
 /*Mobil Version*/
 @media (max-width: 650px) {
@@ -432,11 +426,7 @@ button:hover {
         z-index: 99999;
     }
 
-    .Nachrichtverfassen {
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top:50px;
-    }
+  
 
 }
 /*############## Anpassung des Hamburgermenü #####################*/
@@ -464,9 +454,5 @@ button:hover {
         border-style: solid;
         border-color: grey !important;
     }
-    .Nachrichtverfassen {
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top:50px;
-    }
+   
 }
