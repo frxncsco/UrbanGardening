@@ -189,6 +189,13 @@ button:hover {
     width: 100%;
 }
 
+.post h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30pt;
+    font-weight: bold;
+    color: black;
+}
+
 .post h2 a{
     font-family: 'Times New Roman', Times, serif;
     font-size: 30pt;
@@ -391,6 +398,12 @@ button:hover {
         color: black;
     }
 
+    .post h2 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20pt;
+        font-weight: bold;
+        color: black;
+    }
 
     .post h2 a {
         font-family: 'Times New Roman', Times, serif;
