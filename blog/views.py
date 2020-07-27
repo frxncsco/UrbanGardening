@@ -114,3 +114,17 @@ def startseite(request):
     else: #KONTAKT
         form = ContactForm() #KONTAKT
     return render(request, 'blog/startseite.html',  {'events': events,'posts': posts,'form': form,'new_kontakt': new_kontakt}) #KONTAKT})
+
+######################
+#      IMPRESSUM    #
+######################
+
+def impressum(request):
+    return render(request, 'blog/impressum.html')
+
+######################
+#      DATENSCHUTZ   #
+######################
+
+def datenschutz(request):
+    return render(request, 'blog/datenschutz.html')
