@@ -9,7 +9,7 @@ Wenn Sie unsere Urban Gardening Seite starten wollen, dann müssen sie folgende 
 Hier werden Sie nun gefragt, wie Sie die Felder benennen wollen. Sie geben hier "y" für yes ein und bekommen nun den Vorschlag diese
 mit timezone.now zu benennen. Genau das tun Sie (ggf. zwei mal).
 5. Um später selber z.B. einen Blogartikel zu verfassen, bearbeiten und zu löschen müssen Sie als Superuser angemeldet sein.
-Diesen Superuser müssen Sie vorher allerdings erstellen, indem Sie "paython manage.py createsuperuser" in die Konsole eingeben und anschließend
+Diesen Superuser müssen Sie vorher allerdings erstellen, indem Sie "python manage.py createsuperuser" in die Konsole eingeben und anschließend
 Benutzername, E-Mail und Passwort eingeben.
 6. Nun kann der Server mit "python manage.py runserver" gestartet werden. Im Browser gelangen Sie mit der folgenden url auf die Seite: http://127.0.0.1:8000/
 7. Wenn Sie sich noch einloggen wollen müssen Sie http://127.0.0.1:8000/admin eingeben und gelangen so zu einem Log-In, wo Sie sich mit dem zuvor erstellten 
