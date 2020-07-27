@@ -45,19 +45,19 @@ h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 30pt;
     font-weight: bold;
-    color: black;
+    color: #2B463C;
 }
 
 h2 a{
     font-family: 'Times New Roman', Times, serif;
     font-size: 30pt;
     font-weight: bold;
-    color: black;  
+    color: #2B463C;  
 }
 
 h2 a:hover {
     text-decoration: none;
-    color: #8AA989;
+    color: #B1d182;
 }
 
 h3 {
@@ -65,7 +65,7 @@ h3 {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 30pt;
-    color: black;
+    color: #2B463C;
 }
 
 h4 {
@@ -80,13 +80,13 @@ h4 a {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-size: 16pt;
-    color: #303030; 
+    color: #2b463C; 
     text-decoration: none;
 }
 
 h4 a:hover {
     text-decoration: none;
-    color: #49654C;
+    color: #B1d182;
 }
 
 
@@ -95,13 +95,13 @@ h5 {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 30pt; 
-    color: #EBEBE9;
+    color: #2B463C;
 }
 
 h6 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    color: #49654C;
+    color: #688F4E;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -152,23 +152,23 @@ header {
     margin-bottom: 0 !important;
     padding: 0 0 !important;
     text-align: center !important;
-    background-color: white !important;
+    background-color: #B1d182 !important;
 }
 .navbar-nav li a {
-    color: #8AA989 !important;
+    color: #f4f1e9 !important;
     font-size: 24px !important;
     text-align: center !important;
 }
 
 .navbar-nav li a:hover {
-    color: #49654C !important;
+    color: #2b463c !important;
     font-size: 24px !important;
     text-align: center !important;
 }
 
 .collapse .navbar-collapse {
     border-style: solid;
-    border-color: grey !important;
+    border-color: #2b463c !important;
 }
 
 /*
@@ -220,8 +220,8 @@ button:hover {
     padding-left: 200px;
     padding-right: 200px;
     border-style: solid;
-    border-color: #E3E6DA;
-    background-color: #E3E6DA;
+    border-color: #f4f1e9;
+    background-color: #f4f1e9;
 }
 
 .event-container {
@@ -230,8 +230,8 @@ button:hover {
     padding-left: 200px;
     padding-right: 200px;
     border-style: solid;
-    border-color: #E3E6DA;
-    background-color: #E3E6DA;
+    border-color: #f4f1e9;
+    background-color: #f4f1e9;
 }
 
 .post {
@@ -263,7 +263,7 @@ button:hover {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
     font-weight: normal;
-    color: grey;
+    color: gray;
     text-align: right;
     align-items: right;
 }
@@ -297,8 +297,8 @@ button:hover {
     padding-left: 200px;
     padding-right: 200px;
     border-style: solid;
-    border-color: #E3E6DA;
-    background-color: #E3E6DA;
+    border-color: #f4f1e9;
+    background-color: #f4f1e9;
 }
 
 .Eventpost {
@@ -308,8 +308,8 @@ button:hover {
     padding-left: 200px;
     padding-right: 200px;
     border-style: solid;
-    border-color: #E3E6DA;
-    background-color: #E3E6DA;
+    border-color: #f4f1e9;
+    background-color: #f4f1e9;
 }
 
 /*
@@ -363,12 +363,12 @@ button:hover {
 .Kommentare2 h3{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20pt;
-    color: #8AA989;
+    color: #B1D182;
     padding: 10px 10px;
 }
 
 .comments{
-    background-color:#EBEBE9;
+    background-color:#f4f1e9;
     padding: 20px 20px;
     border-bottom: solid;
     border-left: solid;
@@ -385,13 +385,13 @@ button:hover {
     padding-bottom: 100px;
     padding-left: 300px;
     padding-right: 300px;
-    background-color: #49654C;
+    background-color: #B1d182;
 }
 /* Nachrichten*/
 
 .Nachrichtverfassen {
     padding: 75px 300px;
-    background-color: #49654C;
+    background-color: #B1d182;
 }
 
 /*
@@ -416,7 +416,7 @@ button:hover {
 .links2 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    color: #EBEBE9;
+    color: #f4f1e9;
 }
 
 /*
@@ -449,7 +449,7 @@ button:hover {
 .rechts2 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    color: #EBEBE9;
+    color: #f4f1e9;
     text-align: end;
 }
 
@@ -466,7 +466,7 @@ button:hover {
     padding: 50px 300px;
     margin: 0px;
     text-align: center;
-    background-color: #8AA989;
+    background-color: #B1d182;
 }
 
 .willkommen button {
@@ -488,7 +488,7 @@ button:hover {
 
 .aktuelles {
     padding: 50px 200px;
-    background-color: #EBEBE9;
+    background-color: #f4f1e9;
     margin: 0px;
     width: 100%;
 }
@@ -499,7 +499,17 @@ button:hover {
     padding: 10px 10px;
     margin-right: 10px;
     margin-bottom: 15px;
-    background-color: #C0CEB2;
+    background-color: white;
+}
+.events2 h4 a:hover{
+    color: #f4f1e9;
+}
+.events2 h4 a{
+    color: #2b463c;
+}
+
+.events2 p {
+    color: #2b463c;
 }
 
 .post-ubersicht {
@@ -516,7 +526,7 @@ button:hover {
 
 .Nachrichtverfassen {
     padding: 75px 300px;
-    background-color: #49654C;
+    background-color: #b1d182;
 }
 
 /*
@@ -549,7 +559,7 @@ footer {
 }
 
 .mitte :hover{
-    background-color: grey;
+    background-color: #f4f1e9;
     text-decoration: none;
 }
 
@@ -593,7 +603,7 @@ footer {
 }
 
 .fa-twitter {
-    color: black;
+    color: white;
     justify-content: center;
     padding: 15px 10px;
     margin: 0px 5px;
@@ -631,13 +641,13 @@ footer {
     height: 500px;
     width: 100%;
     text-align: center;
-    background-color: #EBEBE9;
+    background-color: #f4f1e9;
 }
 
 .icons p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
-    color: #8AA989;
+    color: #688f4e;
 
 }
 
@@ -667,7 +677,7 @@ footer {
 .Partei {
     width: 100%;
     padding: 20px 50px;
-    background-color: #253628;
+    background-color: #2b463c;
     text-align: justify;
 }
 
@@ -681,8 +691,7 @@ footer {
 }
 
 .Partei p a:hover {
-    background: #EBEBE9;
-    color: #8AA989;
+    color: #f4f1e9;
     text-decoration: none;
 }
 
@@ -695,7 +704,7 @@ footer {
 .Impressum-Container {
     padding: 50px 25%;
     text-align: center;
-    background-color: #EBEBE9;
+    background-color: #f4f1e9;
 }
 
 .Impressum-Text {
@@ -709,7 +718,7 @@ footer {
 }
 
 .Impressum-Text h4 {
-    color: #8AA989;
+    color: #688f4e;
 }
 
 /*
@@ -721,7 +730,7 @@ footer {
 .Datenschutz-Container {
     padding: 50px 300px;
     text-align: justify;
-    background-color: #EBEBE9;
+    background-color: #f4f1e9;
 }
 
 .Datenschutz-Text {
