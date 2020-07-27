@@ -675,11 +675,15 @@ footer {
     color: white;
 }
 
-.bild-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%; 
+.Partei p a {
+    color: white;
+    text-decoration: underline;
+}
+
+.Partei p a:hover {
+    background: #EBEBE9;
+    color: #8AA989;
+    text-decoration: none;
 }
 
 /*
