@@ -38,7 +38,26 @@ h1 {
     font-weight: normal;
     font-size: 60pt;
     text-align: center;
+    color: white;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30pt;
+    font-weight: bold;
     color: black;
+}
+
+h2 a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30pt;
+    font-weight: bold;
+    color: black;  
+}
+
+h2 a:hover {
+    text-decoration: none;
+    color: #8AA989;
 }
 
 h3 {
@@ -48,37 +67,52 @@ h3 {
     font-size: 30pt;
     color: black;
 }
+
 h4 {
     font-style: normal;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-size: 16pt;
 }
-/*
-#########################################################################################################
-                                    Footer
-#########################################################################################################
-*/
-footer {
-    background-color: yellowgreen;
-    background-image: url("https://cdn.pixabay.com/photo/2017/04/07/13/16/leaf-2210973_960_720.jpg");
-    background-size: 100% Auto;
+
+h4 a {
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 16pt;
+    color: #303030; 
+    text-decoration: none;
 }
 
-footer h1 {
-    padding: 15px;
+h4 a:hover {
+    text-decoration: none;
+    color: #49654C;
 }
 
-footer h1 a {
-    font-size: 30;
-    color: black;
+
+h5 {
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 30pt; 
+    color: #EBEBE9;
 }
+
+h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #49654C;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 /*
 #########################################################################################################
                                     Header
 #########################################################################################################
 */
 
+/*
 header {
     justify-content: center;
     background:white;
@@ -105,7 +139,8 @@ header {
     padding: 40px;
     margin-bottom: 0px;
 }
-
+*/
+ 
 /*
 #########################################################################################################
                                     Menü
@@ -116,13 +151,21 @@ header {
     border-radius: 0;
     margin-bottom: 0 !important;
     padding: 0 0 !important;
+    text-align: center !important;
+    background-color: white !important;
 }
 .navbar-nav li a {
-    color: black !important;
+    color: #8AA989 !important;
     font-size: 24px !important;
-    background-color: white !important;
     text-align: center !important;
 }
+
+.navbar-nav li a:hover {
+    color: #49654C !important;
+    font-size: 24px !important;
+    text-align: center !important;
+}
+
 .collapse .navbar-collapse {
     border-style: solid;
     border-color: grey !important;
@@ -134,6 +177,7 @@ header {
 #########################################################################################################
 */
 
+/*
 .Blogeintrag {
     display: flex ;
     justify-content: center;
@@ -162,46 +206,42 @@ header {
 button:hover {
     background-color: grey;
 }
-
+*/
 
 /*
 #########################################################################################################
                                     Post & Event mit deren Eigenschaften
 #########################################################################################################
 */
-.content-container {
-    display: flex;
-    justify-content: center;
-   /*  background: whitesmoke;  */
+
+.post-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    border-style: solid;
+    border-color: #E3E6DA;
+    background-color: #E3E6DA;
 }
 
-.row {
-    display: flex;
-    justify-content: center;   
+.event-container {
     width: 100%;
-    padding-top: 40px;
+    padding-top: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    border-style: solid;
+    border-color: #E3E6DA;
+    background-color: #E3E6DA;
 }
 
 .post {
-    padding: 10px 20px;
-    margin-bottom: 40px; 
+    padding: 50px 100px;
+    margin-bottom: 50px; 
     background-color: white;
     width: 100%;
+    text-align: justify;
 }
 
-.post h2 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30pt;
-    font-weight: bold;
-    color: black;
-}
-
-.post h2 a{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30pt;
-    font-weight: bold;
-    color: black;  
-}
 .post h4 a{
     font-family: 'Times New Roman', Times, serif;
     font-size: 16pt;
@@ -209,9 +249,11 @@ button:hover {
     color:  yellowgreen;
 }
 
-.post h2:hover {
-    text-decoration: none;
-}
+/*
+#########################################################################################################
+                                    Post & Event Model
+#########################################################################################################
+*/
 
 .post-form textarea, .post-form input {
     width: 100%;
@@ -248,11 +290,35 @@ button:hover {
     border-color: grey;
 }
 
+.Blogpost {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    border-style: solid;
+    border-color: #E3E6DA;
+    background-color: #E3E6DA;
+}
+
+.Eventpost {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    border-style: solid;
+    border-color: #E3E6DA;
+    background-color: #E3E6DA;
+}
+
 /*
 #########################################################################################################
                                     Button zur Adminseite
 #########################################################################################################
 */
+
+/*
 .adminseite button {
     padding: 5px 12px;
     background-color: yellowgreen;
@@ -276,53 +342,344 @@ button:hover {
     font-size: 12pt;
     color: black;
 }
+*/
+
 /*
 #########################################################################################################
                                     Kommentare/Nachrichten
 #########################################################################################################
 */
 
-.Kommentare h3 {
-    padding: 10px 20px;
-    margin-bottom: 40px;
+.Kommentare-Container {
+    background-image: url(/media/palmen.PNG);
     width: 100%;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 16pt;
-    text-align: right;
+    padding: 50px 200px;
 }
-.neueskommentar h3{
+
+.Kommentare2 {
+    background-color: #303030;
+}
+
+.Kommentare2 h3{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20pt;
+    color: #8AA989;
+    padding: 10px 10px;
 }
+
 .comments{
-    background-color:white;
-    padding: 10px 20px;
+    background-color:#EBEBE9;
+    padding: 20px 20px;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-color: #303030;
 }
 .created_on{
     text-align: right;
     color: gray;
 }
-.comments h4{
-    color: yellowgreen;
-}
+
 .kommentarverfassen{
-    margin-top: 50px;
-    margin-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 300px;
+    padding-right: 300px;
+    background-color: #49654C;
 }
 /* Nachrichten*/
 
-.Nachrichtverfassen h3 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18pt;
-}
 .Nachrichtverfassen {
-    padding-top:50px;
+    padding: 75px 300px;
+    background-color: #49654C;
+}
+
+/*
+#########################################################################################################
+                                    Startseite
+#########################################################################################################
+*/
+
+.kopfzeile {
+    background-color: #303030;
+    height: 50px;
+    padding: 0px 50px;
+}
+
+.links2 {
+    float: left;
+    width: 75%;
+    height: 50px;
+    padding-top: 15px;
+}
+
+.links2 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #EBEBE9;
+}
+
+/*
+.mitte2 {
+    width: 75%;
+    text-align: center;
+    padding-top: 10px;
+    height: 50px;
+}
+
+.mitte2 button {
+    border: none;
+    background-color: #EBEBE9;
+    cursor: pointer;
+}
+
+.mitte2 button:hover {
+    background-color: #8AA989;
+}
+*/
+
+.rechts2 {
+    float: right;
+    width: 25%;
+    text-align: center;
+    padding-top: 15px;
+    height: 50px;
+}
+
+.rechts2 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #EBEBE9;
+    text-align: end;
+}
+
+.rechts2 :hover{
+    text-decoration: underline;
+}
+
+.introbild {
+    padding: 250px 200px;
+    background-image: url(/media/introbild.png);
+}
+
+.willkommen {
+    padding: 50px 300px;
+    margin: 0px;
+    text-align: center;
+    background-color: #8AA989;
+}
+
+.willkommen button {
+    padding: 9px 25px;
+    border-style: solid;
+    border-color: #303030;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    background-color: whitesmoke;
+}
+
+.willkommen p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 17pt;
+}
+
+.aktuelles {
+    padding: 50px 200px;
+    background-color: #EBEBE9;
+    margin: 0px;
+    width: 100%;
+}
+
+.events2 {
+    display: inline-block;
+    width: 30%;
+    padding: 10px 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    background-color: #C0CEB2;
+}
+
+.post-ubersicht {
+    background-image: url(/media/palmen.PNG);
+    width: 100%;
+    padding: 50px 200px;
+}
+
+.post2 {
+    padding: 50px 100px;
+    background-color: white;
+    text-align: justify;
+}
+
+.Nachrichtverfassen {
+    padding: 75px 300px;
+    background-color: #49654C;
+}
+
+/*
+#########################################################################################################
+                                    Footer
+#########################################################################################################
+*/
+
+footer {
+    background-color: #303030;
+    height: 100px;
+}
+
+.links {
+    float: left;
+    width: 25%;
+    text-align: center;
+    height: 80px;
+    padding-top: 5px;
+}
+
+.mitte{
+    width: 75%;
+    text-align: center;
+    height: 80px;
+    padding-top: 20px;
+}
+.mitte a {
+    color: white;
+}
+
+.mitte :hover{
+    background-color: grey;
+    text-decoration: none;
+}
+
+.rechts {
+    float: right;
+    width: 25%;
+    text-align: center;
+    height: 80px;
+    padding-top: 30px;
+
+}
+
+.rechts a {
+    color: whitesmoke;
+}
+
+.rechts :hover{
+    text-decoration: underline;
+}
+
+.Impressum {
+    margin: 0px 10px;
+}
+
+.Datenschutz {
+    margin: 0px 10px;
+}
+
+.Logo {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Social Media Icons*/
+
+.fa {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.fa-twitter {
+    color: black;
+    justify-content: center;
+    padding: 15px 10px;
+    margin: 0px 5px;
+}
+
+.fa-instagram {
+    color: black;
+    justify-content: center;   
+    padding: 15px 10px;
+    margin: 0px 5px;
+}
+
+.fa-pinterest {
+    color: black;
+    justify-content: center;
+    padding: 15px 10px;
+    margin: 0px 5px;
+}
+
+.logo {
+    background-color: #303030;
+}
+
+/*
+#########################################################################################################
+                                    ÜBER MICH
+#########################################################################################################
+*/
+
+.Ziele {
+    padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: darkgrey;
-    border-left: darkgrey;
-    border-right: darkgrey;
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    background-color: #EBEBE9;
+}
+
+.icons p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: #8AA989;
+
+}
+
+.icon1, .icon2 {
+    float: left;
+    width: 30%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-right: 5%;
+}
+.icon3 {
+    float: right;
+    width: 30%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.Partei-Container {
+    background-image: url(/media/ProtectEarth.jpg);
+    padding: 50px 300px;
+}
+
+.Partei {
+    width: 100%;
+    padding: 20px 50px;
+    background-color: #253628;
+    text-align: justify;
+}
+
+.Partei h3, .Partei p {
+    color: white;
+}
+
+.bild-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
 }
 
 

@@ -9,65 +9,64 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                    {% block content %}
-                        <div class="Willkommen">
-                            <h3>Herzlich Willkommen auf meinem Blog </h3>
-                            <p>Mein Name ist Susan. Ich bin 24 Jahre alt und aktuelle Masterandin an der Freien Universität zu Berlin. <br /> Schon seit langem ist mir klar geworden wie wichtig es ist, die Umwelt zu schützen. <br /> Daher habe ich diesen Blog errichtet, um Menschen
-                            darauf aufmerksam zu machen, wie sie mit kleinen aber einfachen Tricks die Umwelt schützen können. </p>
-                            <p>Ich freue mich euch alle kennenzulernen!</p>
-                        </div>
-                        
-                        <div class="Willkommen">
-                            <h3>Aktuelles</h3>
-                            {% for event in events %}
-                            <div class = "post">
-                                <h4><a href="{% url 'event_detail' pk=event.pk %}">{{event.eventtitel }}</a></h4>
-                                <p>{{ event.veranstaltungsort}}, am: {{ event.veranstaltungsdatum}}</p>
-                            </div>
-                            {% endfor %}  
-                        </div>
-
-                        {% for post in posts %}
-                        <div class="post">
-                            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titel }}</a></h2>
-                            <p>{{ post.text|linebreaksbr }}</p>
-                            {% if post.bild.url != '/media/default.PNG' %}
-                            <div class="bild">
-                            <img src="{{ post.bild.url }}" width="60%" height="auto"> <!--Bild anzeigen lassen mit 25% Größe auf der linken Seite des Kastens-->
-                            </div>
-                            {% endif %}
-                            <div class="author">
-                                {{ post.author|linebreaksbr }}
-                            </div>
-                            <div class="date">
-                                {{ post.published_date }}
-                            </div>
-                        </div>
-                        {% endfor %}   
-
-                        <div class="Nachrichtverfassen">
-                            <!-- Nachricht wenn man bereits Nachrich verschickt hat-->
-                            <div class="NeueNachricht">
-                                {% if new_kontakt %}
-                                <div class= "alert-success" role="alert">
-                                    Vielen Dank für deine Nachricht! Ich werde mich in den nächsten Tagen bei dir melden! :)
-                                </div>
-                                {% else %}
-                                <!-- Nachricht an Susan schreiben-->
-                                <h3>Schreib mir gerne eine Nachricht</h3>
-                                <form method="POST" class="post-form">{% csrf_token %} 
-                                    {{ form.as_p }}
-                                    <button type="submit" class="save btn btn-default">Senden</button>
-                                </form>
-                                {% endif %}
-                            </div>
-                        </div>
-                </div>       
-            </div>     
+        {% block content %}
+        <div class="Introbild">
+            <h1>Herzlich Willkommen auf meinem Blog</h1>
         </div>
-        {% endblock %}
+        <div class="Willkommen">
+            <p>Mein Name ist Susan. Ich bin 24 Jahre alt und aktuelle Masterandin an der Freien Universität zu Berlin. <br /> Schon seit langem ist mir klar geworden wie wichtig es ist, die Umwelt zu schützen. <br /> Daher habe ich diesen Blog errichtet, um Menschen
+            darauf aufmerksam zu machen, wie sie mit kleinen aber einfachen Tricks die Umwelt schützen können. </p>
+            <p>Ich freue mich euch alle kennenzulernen!</p>
+            <a href="{% url 'ubermich' %}"><button>MEHR ÜBER MICH</button></a>
+        </div>
+        
+        <div class="Aktuelles">
+            <h3>Aktuelles</h3>
+            {% for event in events %}
+            <div class ="events2">
+                <h4><a href="{% url 'event_detail' pk=event.pk %}">{{event.eventtitel }}</a></h4>
+                <p>{{ event.veranstaltungsort}}, am: {{ event.veranstaltungsdatum}}</p>
+            </div>
+            {% endfor %}
+        </div>  
+
+        <div class="post-ubersicht">
+            {% for post in posts %}
+            <div class="post2">
+                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titel }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+                {% if post.bild.url != '/media/default.PNG' %}
+                <div class="bild">
+                <img src="{{ post.bild.url }}" width="60%" height="auto"> <!--Bild anzeigen lassen mit 25% Größe auf der linken Seite des Kastens-->
+                </div>
+                {% endif %}
+                <div class="author">
+                    {{ post.author|linebreaksbr }}
+                </div>
+                <div class="date">
+                    {{ post.published_date }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>  
+
+        <div class="Nachrichtverfassen">
+            <!-- Nachricht wenn man bereits Nachrich verschickt hat-->
+            <div class="NeueNachricht">
+                {% if new_kontakt %}
+                <div class= "alert-success" role="alert">
+                    Vielen Dank für deine Nachricht! Ich werde mich in den nächsten Tagen bei dir melden! :)
+                </div>
+                {% else %}
+                <!-- Nachricht an Susan schreiben-->
+                <h5>Schreib mir gerne eine Nachricht</h5>
+                <form method="POST" class="post-form">{% csrf_token %} 
+                    {{ form.as_p }}
+                    <button type="submit" class="save btn btn-default">Senden</button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+        {% endblock %}            
     </body>  
 </html>

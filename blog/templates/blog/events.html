@@ -9,23 +9,19 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                    {% block content %}
-                        {% for event in events %}
-                        <div class = "post">
-                            <h2><a href="{% url 'event_detail' pk=event.pk %}">{{event.eventtitel }}</a></h2>
-                            <p>{{ event.veranstaltungsort}} am {{ event.veranstaltungsdatum}}</p>
-                            <p>{{ event.beschreibung|linebreaksbr }}</p>
-                            <div class="date">
-                                {{ event.published_date2 }}
-                            </div>
-                        </div>
-                        {% endfor %} 
-                    {% endblock %}
+    {% block content %}
+        <div class="event-container">
+                {% for event in events %}
+                <div class = "post">
+                    <h2><a href="{% url 'event_detail' pk=event.pk %}">{{event.eventtitel }}</a></h2>
+                    <p>{{ event.veranstaltungsort}} am {{ event.veranstaltungsdatum}}</p>
+                    <p>{{ event.beschreibung|linebreaksbr }}</p>
+                    <div class="date">
+                        {{ event.published_date2 }}
+                    </div>
                 </div>
-            </div>
+            {% endfor %} 
         </div>
+    {% endblock %}
     </body>
 </html>

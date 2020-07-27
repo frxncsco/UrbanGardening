@@ -9,29 +9,61 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                    {% block content %}
-                        <div class="Willkommen">
-                            <img src="https://cdn.pixabay.com/photo/2016/01/19/17/19/young-woman-1149643_1280.jpg", width="100%" height="auto"/>
-                            <h3>Wer bin ich? </h3>
-                            <p>Mein Name ist Susan. Ich bin 24 Jahre alt und studiere Nachhaltiges Management an der Freien Universität zu Berlin. 
-                                Ich bin politisch stark engagiert und setzte mich für das Verbreiten von nachhhaltigen Denkweisen und Lebensweisen ein. 
-                                In meiner Freizeit unterstütze ich regelmäßig nachhaltige Projekte und partizipiere an Umweltdemonstrationen.
-                                Mit diesem Blog möchte ich euch gerne inspirieren ein Bewusstsein für Nachhaltigkeit zu entwicklen und unsere Städte grüner zu gestalten. 
-                                <br> <br> Meine Ziele:
-                            </p>
-                            <ul>
-                                <li>Euch für Nachhaltigkeit begeistern</li>
-                                <li>Lifehacks und Tipps bezüglich Urban Gardening</li>
-                                <li>Ökologischen Fußabdruck minimieren</li>
-                                <li>Natur schätzen zu lernen</li>
-                                <li>Nachhaltigkeit in die Politik tragen</li>
-                                <li>Informationen zu anstehenden politischen Events verbreiten</li>
-                              </ul>
-                        </div>
-                        
-                                                
-                        
-                    {% endblock %}
+        {% block content %}
+            <img src="https://cdn.pixabay.com/photo/2016/01/19/17/19/young-woman-1149643_1280.jpg", width="100%" height="auto"/>  
+            <div class="Willkommen">
+                <h3>Wer bin ich? </h3>
+                <p>Mein Name ist Susan. Ich bin 24 Jahre alt und studiere Nachhaltiges Management an der Freien Universität zu Berlin. <br /> 
+                <p>Ich bin politisch stark engagiert und setzte mich für das Verbreiten von nachhhaltigen Denkweisen und Lebensweisen ein.</p>
+                <p>In meiner Freizeit unterstütze ich regelmäßig nachhaltige Projekte und partizipiere an Umweltdemonstrationen.</p>
+                <p>Mit diesem Blog möchte ich euch gerne inspirieren ein Bewusstsein für Nachhaltigkeit zu entwicklen und unsere Städte grüner zu gestalten.</p>
+                </p>
+            </div>
+
+            <div class="Ziele">
+                <h3>Meine Ziele</h3>
+                <div class="Icons">
+                    <div class="icon1">
+                        <img src="/media/icons/vision-2.png", width="75px">
+                        <p>Begeisterung <br />für Nachhaltigkeit</p>
+                        <br /> 
+                        <img src="/media/icons/heart.png", width="75px">
+                        <p>Wertschätzung <br />der Natur</p>
+                    </div>
+                    <div class="icon3">
+                        <img src="/media/icons/eco-friendly.png", width="75px">
+                        <p>Ökologischen Fußabdruck <br />minimieren</p>
+                        <br /> 
+                        <img src="/media/icons/calendar.png", width="75px">
+                        <p>Informationen zu anstehenden <br />politischen Events</p>
+                    </div>
+                    <div class="icon2">
+                        <img src="/media/icons/plant.png", width="75px">
+                        <p>Tipps und Tricks <br />zum Urban Gardening</p>
+                        <br /> 
+                        <img src="/media/icons/speech-bubble.png", width="75px">
+                        <p>Das Thema Nachhaltigkeit <br /> auch in die Politik tragen</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Partei-Container">
+                <div class="Partei">
+                <h3>Werde Mitglied in meiner Partei!</h3>
+                <br />
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore 
+                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+                    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+                    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
+                    takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                    sed diam nonumy eirmod tempor invidunt ut labore et re magna aliquyam erat, sed diam voluptua. At vero eos et 
+                    accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum 
+                    dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea 
+                    rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <img src="/media/grünen2.png", class="bild-center">
+                </div>
+            </div>           
+        {% endblock %}
+    </body>
+</html>
