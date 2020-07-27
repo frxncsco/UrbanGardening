@@ -682,6 +682,57 @@ footer {
     width: 50%; 
 }
 
+/*
+#########################################################################################################
+                                    IMPRESSUM
+#########################################################################################################
+*/ 
+
+.Impressum-Container {
+    padding: 50px 25%;
+    text-align: center;
+    background-color: #EBEBE9;
+}
+
+.Impressum-Text {
+    width: 100%;
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.Impressum-Text h1 {
+    color: black;
+}
+
+.Impressum-Text h4 {
+    color: #8AA989;
+}
+
+/*
+#########################################################################################################
+                                    DATENSCHUTZ
+#########################################################################################################
+*/ 
+
+.Datenschutz-Container {
+    padding: 50px 300px;
+    text-align: justify;
+    background-color: #EBEBE9;
+}
+
+.Datenschutz-Text {
+    width: 100%;
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.Datenschutz-Text h1 {
+    color: black;
+}
+
+.Datenschutz-Text h3 {
+    font-size: 20pt;
+}
 
 /*
 #########################################################################################################

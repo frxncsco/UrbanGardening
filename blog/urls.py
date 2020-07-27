@@ -12,4 +12,6 @@ urlpatterns = [
     path('blog', views.post_list, name='post_list'),
     path('event/<int:pk>/edit/', views.event_edit, name='event_edit'),#EVENT
     path('event/<int:pk>/', views.event_detail, name='event_detail'), #EVENT
+    path('impressum', views.impressum, name='impressum'), #IMPRESSUM
+    path('datenschutz', views.datenschutz, name='datenschutz'), #DATENSCHUTZ
 ]
