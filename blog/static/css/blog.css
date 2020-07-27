@@ -756,13 +756,21 @@ footer {
                                     Unterschiedliche Bildschirmgrößen
 #########################################################################################################
 */ 
+@media (max-width: 1150px) {
 
+    .post-ubersicht {
+        padding: 7% 7%;
+    }
+
+    .Partei-Container {
+        padding: 15% 15%;
+    }
+}
 
 /*Mobil Version*/
 @media (max-width: 950px) {
 
-        /*########### Schriftgröße im Menü anpassen bis Burgermenü erscheint ###########*/
-
+    /*########### Schriftgröße im Menü anpassen bis Burgermenü erscheint ###########*/
     header {
         justify-content: center;
         background: white;
@@ -776,7 +784,7 @@ footer {
     }
 
     /*########### Buttons Blog und Event hinzufügen ###########*/
-     .Blogeintrag {
+    .Blogeintrag {
         display: flex;
         background: white;
         padding: 0px 15%;
@@ -820,15 +828,13 @@ footer {
 
     .post h2 {
         font-size: 20pt;
+        text-align: left;
     }
 
-    .post h2 a {
-        font-size: 20pt;
-    }
     .post2 h2 a {
         font-size: 20pt;
-
     }
+
     h3 {
         font-size: 20pt;
     }
@@ -836,6 +842,7 @@ footer {
     h4 a {
         font-size: 12pt;
     }
+
     h5 {
         font-size: 25px;
     }
@@ -863,26 +870,19 @@ footer {
         text-align: justify;
     }
 
-    .post h4 a{
+    .post h4 a {
         font-family: 'Times New Roman', Times, serif;
         font-size: 16pt;
         font-weight: bold;
     }
 
     .post-ubersicht {
-    padding: 2% 2%;
+        padding: 2% 2%;
     }
 
     .post2 {
         padding: 5% 5%;
     }
-}
-
-    /*
-    #########################################################################################################
-                                        Post & Event Model
-    #########################################################################################################
-    */
 
     .post-form textarea, .post-form input {
         width: 100%;
@@ -892,7 +892,7 @@ footer {
         font-size: 12pt;
     }
 
-    .author{
+    .author {
         font-size: 12pt;
     }
 
@@ -921,11 +921,13 @@ footer {
         padding-left: 5%;
         padding-right: 5%;
     }
-    .Introbild{
+
+    .Introbild {
         padding: 7% 7%;
         padding-bottom: 150px;
         padding-top: 150px;
     }
+
     .Introbild h1 {
         font-size: 25pt;
         color: white;
@@ -934,25 +936,52 @@ footer {
     .Willkommen {
         padding: 7% 7%;
     }
+
     .Willkommen p {
         font-size: 12pt;
     }
+
     .Aktuelles {
         padding: 7% 7%;
     }
+
     .Aktuelles h3 {
         text-align: center;
     }
+
     .Nachrichtverfassen {
         padding: 7% 7%;
         padding-bottom: 50px;
     }
-    .links{
-       display: none;
-    }
+
     .mitte {
         display: none;
     }
+
+    .Ziele {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    .icon1 {
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+    .icon2 {
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+    .icon3 {
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+    .Partei-Container {
+        padding: 7% 7%;
+    }
+    .Partei {
+        text-align: left;
+    }
+}
+
 /*############## Anpassung des Burgermenü #####################*/
 
 @media (max-width: 575px) {
@@ -990,6 +1019,17 @@ footer {
         height: 80px;
         line-height: 60px;
         z-index: 99999;
+    }
+
+    .Ziele {
+        padding-bottom: 70px ;
+    }
+    .icons p {
+        font-size: 10px;
+    }
+
+    .links {
+        display: none;
     }
 
 }
