@@ -34,7 +34,7 @@ p {
 
 h1 {
     font-style: normal;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Arial', Times, serif;
     font-weight: normal;
     font-size: 60pt;
     text-align: center;
@@ -42,14 +42,14 @@ h1 {
 }
 
 h2 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Arial', Times, serif;
     font-size: 30pt;
     font-weight: bold;
     color: black;
 }
 
 h2 a{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Arial', Times, serif;
     font-size: 30pt;
     font-weight: bold;
     color: black;  
@@ -62,7 +62,7 @@ h2 a:hover {
 
 h3 {
     font-style: normal;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Arial', Times, serif;
     font-weight: bold;
     font-size: 30pt;
     color: black;
@@ -92,7 +92,7 @@ h4 a:hover {
 
 h5 {
     font-style: normal;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Arial', Times, serif;
     font-weight: bold;
     font-size: 30pt; 
     color: #EBEBE9;
@@ -156,10 +156,18 @@ header {
 }
 .navbar-nav li a {
     color: #8AA989 !important;
-    font-size: 24px !important;
+    font-size: 25px !important;
+    font-family: "Arial" !important;
+    text-align: center !important;
+    padding-right: 15px !important;
+    padding-right: 20px !important;
+}
+.navbar-nav li a:hover{
+    color: #49654c !important;
+    font-size: 25px !important;
+    font-family: "Arial" !important;
     text-align: center !important;
 }
-
 .navbar-nav li a:hover {
     color: #49654C !important;
     font-size: 24px !important;
@@ -243,7 +251,7 @@ button:hover {
 }
 
 .post h4 a{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Arial', Times, serif;
     font-size: 16pt;
     font-weight: bold;
     color:  yellowgreen;
@@ -361,7 +369,7 @@ button:hover {
 }
 
 .Kommentare2 h3{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Arial', Times, serif;
     font-size: 20pt;
     color: #8AA989;
     padding: 10px 10px;
@@ -691,11 +699,20 @@ footer {
 
 
 /*Mobil Version*/
-@media (max-width: 650px) {
+@media (max-width: 950px) {
 
-    /*########### Schriftgröße im Menü anpassen bis Burgermenü erscheint ###########*/
-    .navbar-nav li a {
-        font-size: 18px !important;
+        /*########### Schriftgröße im Menü anpassen bis Burgermenü erscheint ###########*/
+
+    header {
+        justify-content: center;
+        background: white;
+        position: sticky;
+        display: flex;
+        top: 0px;
+        width: 100%;
+        height: 100px;
+        line-height: 25px;
+        z-index: 99999;
     }
 
     /*########### Buttons Blog und Event hinzufügen ###########*/
@@ -737,66 +754,145 @@ footer {
         padding: 20px;
     }
 
-    .Titel {
-        background: yellowgreen;
-        background-image: url("https://cdn.pixabay.com/photo/2017/04/07/13/16/leaf-2210973_960_720.jpg");
-        background-size: 100% Auto;
-        margin-top: 0;
-        padding: 40px;
-        margin-bottom: 0px;
-    }
-
     h1 {
-        font-style: normal;
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: bold;
         font-size: 35pt;
-        text-align: center;
-        color: black;
     }
 
     .post h2 {
-        font-family: 'Times New Roman', Times, serif;
         font-size: 20pt;
-        font-weight: bold;
-        color: black;
     }
 
     .post h2 a {
-        font-family: 'Times New Roman', Times, serif;
         font-size: 20pt;
-        font-weight: bold;
-        color: black;
     }
+    .post2 h2 a {
+        font-size: 20pt;
 
+    }
     h3 {
-        font-style: normal;
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: bold;
         font-size: 20pt;
     }
 
     h4 a {
-        font-style: normal;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: normal;
+        font-size: 12pt;
+    }
+    h5 {
+        font-size: 25px;
+    }
+
+
+    .post-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .event-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .post {
+        padding: 5% 5%;
+        margin-bottom: 50px;
+        background-color: white;
+        width: 100%;
+        text-align: justify;
+    }
+
+    .post h4 a{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16pt;
+        font-weight: bold;
+    }
+
+    .post-ubersicht {
+    padding: 2% 2%;
+    }
+
+    .post2 {
+        padding: 5% 5%;
+    }
+}
+
+    /*
+    #########################################################################################################
+                                        Post & Event Model
+    #########################################################################################################
+    */
+
+    .post-form textarea, .post-form input {
+        width: 100%;
+    }
+
+    .date {
         font-size: 12pt;
     }
 
-    header {
-        justify-content: center;
-        padding: 10px 15%;
-        background: white;
-        position: sticky;
-        display: flex;
-        top: 0px;
-        width: 100%;
-        height: 80px;
-        line-height: 60px;
-        z-index: 99999;
+    .author{
+        font-size: 12pt;
     }
 
-  
+    .save {
+        margin-bottom: 20px;
+    }
+
+    .edit {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-color: grey;
+    }
+
+    .Blogpost {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 100px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .Eventpost {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 100px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .Introbild{
+        padding: 7% 7%;
+        padding-bottom: 150px;
+        padding-top: 150px;
+    }
+    .Introbild h1 {
+        font-size: 25pt;
+        color: white;
+    }
+
+    .Willkommen {
+        padding: 7% 7%;
+    }
+    .Willkommen p {
+        font-size: 12pt;
+    }
+    .Aktuelles {
+        padding: 7% 7%;
+    }
+    .Aktuelles h3 {
+        text-align: center;
+    }
+    .Nachrichtverfassen {
+        padding: 7% 7%;
+        padding-bottom: 50px;
+    }
+    .links{
+       display: none;
+    }
+    .mitte {
+        display: none;
+    }
 
 }
 /*############## Anpassung des Hamburgermenü #####################*/
@@ -824,5 +920,18 @@ footer {
         border-style: solid;
         border-color: grey !important;
     }
-   
+
+    header {
+        justify-content: center;
+        padding: 5px 5%;
+        background: white;
+        position: sticky;
+        display: flex;
+        top: 0px;
+        width: 100%;
+        height: 80px;
+        line-height: 60px;
+        z-index: 99999;
+    }
+
 }
