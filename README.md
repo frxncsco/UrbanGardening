@@ -6,7 +6,7 @@ Wenn Sie unsere Urban Gardening Seite starten wollen, dann müssen sie folgende 
 2. Erstellen und starten Sie nun eine virtuelle Umgebung in diesem Ordner
 3. Installieren Sie nun die requirements, die Sie in der requirements.txt finden.
 3. Da die Datenbank nicht im GitHub gespeichert wird, müssen Sie nun diese mit dem Befehl "python manage.py makemigrations" in der Konsole anlegen. 
-Hier werden Sie nun gefragt, Sie die Felder benennen wollen. Sie geben hier "y" für yes ein und bekommen nun den Vorschlag diese
+Hier werden Sie nun gefragt, wie Sie die Felder benennen wollen. Sie geben hier "y" für yes ein und bekommen nun den Vorschlag diese
 mit timezone.now zu benennen. Genau das tun Sie (ggf. zwei mal).
 4. Um später selber z.B. einen Blogartikel zu verfassen, bearbeiten und zu löschen müssen Sie als Superuser angemeldet sein.
 Diesen Superuser müssen Sie vorher allerdings erstellen, indem Sie "paython manage.py createsuperuser" in die Konsole eingeben und anschließend
