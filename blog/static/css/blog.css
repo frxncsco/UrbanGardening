@@ -463,7 +463,8 @@ button:hover {
 
 .introbild {
     padding: 250px 200px;
-    background-image: url(/media/introbild.png);
+    background-image: url(/media/introbild5.jpg);
+    background-size: 100%; 
 }
 
 .willkommen {
