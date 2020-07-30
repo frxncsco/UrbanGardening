@@ -955,7 +955,7 @@ footer {
         padding-bottom: 50px;
     }
 
-    .mitte {
+    .links {
         display: none;
     }
 
@@ -1027,10 +1027,6 @@ footer {
     }
     .icons p {
         font-size: 10px;
-    }
-
-    .links {
-        display: none;
     }
 
 }
