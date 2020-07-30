@@ -462,7 +462,9 @@ button:hover {
 }
 
 .introbild {
-    padding: 250px 200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding: 15% 15%;
     background-image: url(/media/introbild5.jpg);
     background-size: 100%; 
 }
@@ -715,7 +717,7 @@ footer {
 .Impressum-Text {
     width: 100%;
     padding: 20px 50px;
-    text-align: center;
+    text-align: left;
 }
 
 .Impressum-Text h1 {
@@ -741,7 +743,7 @@ footer {
 .Datenschutz-Text {
     width: 100%;
     padding: 20px 50px;
-    text-align: center;
+    text-align: left;
 }
 
 .Datenschutz-Text h1 {
@@ -766,6 +768,22 @@ footer {
     .Partei-Container {
         padding: 15% 15%;
     }
+
+    .Kommentare-Container {
+        padding: 15% 15%;
+    }
+
+    .Kommentarverfassen {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .introbild {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding: 7% 7%;
+    background-image: url(/media/introbild5.jpg);
+    background-size: 100%;
+}
 }
 
 /*Mobil Version*/
@@ -774,7 +792,7 @@ footer {
     /*########### Schriftgröße im Menü anpassen bis Burgermenü erscheint ###########*/
     header {
         justify-content: center;
-        background: white;
+        background: #B1d182;
         position: sticky;
         display: flex;
         top: 0px;
@@ -925,12 +943,12 @@ footer {
 
     .Introbild {
         padding: 7% 7%;
-        padding-bottom: 150px;
-        padding-top: 150px;
+        padding-bottom: 30px;
+        padding-top: 30px;
     }
 
     .Introbild h1 {
-        font-size: 25pt;
+        font-size: 35pt;
         color: white;
     }
 
@@ -981,6 +999,25 @@ footer {
     .Partei {
         text-align: left;
     }
+    .Kommentare-Container {
+        padding: 7% 7%;
+    }
+    .Kommentarverfassen {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    .Impressum-Container {
+        padding: 7% 7%;
+    }
+    .Impressum-Text {
+        text-align: left;
+    }
+    .Datenschutz-Container {
+        padding: 7% 7%;
+    }
+    .Datenschutz-Text {
+        text-align: left;
+    }
 }
 
 /*############## Anpassung des Burgermenü #####################*/
@@ -993,6 +1030,7 @@ footer {
     margin-bottom: 0 !important;
     padding: 0 0 !important;
     }
+
     .navbar-nav li a {
         color: white!important;
         font-size: 18px !important;
@@ -1027,6 +1065,16 @@ footer {
     }
     .icons p {
         font-size: 10px;
+    }
+    .Introbild {
+        padding: 5% 5%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .Introbild h1 {
+        font-size: 20pt;
+        color: white;
     }
 
 }
