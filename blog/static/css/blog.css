@@ -462,11 +462,14 @@ button:hover {
 }
 
 .introbild {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding: 15% 15%;
     background-image: url(/media/introbild5.jpg);
     background-size: 100%; 
+}
+.introbild h1 {
+    font-size: 80px;
 }
 
 .willkommen {
@@ -781,9 +784,10 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     padding: 7% 7%;
-    background-image: url(/media/introbild5.jpg);
-    background-size: 100%;
-}
+    }
+    .introbild h1 {
+    font-size: 60px;
+    }
 }
 
 /*Mobil Version*/
