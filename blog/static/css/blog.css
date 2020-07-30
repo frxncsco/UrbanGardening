@@ -1030,9 +1030,9 @@ footer {
 
     /*########### Menü ###########*/
     .navbar{
-    border-radius: 0;
-    margin-bottom: 0 !important;
-    padding: 0 0 !important;
+        border-radius: 0;
+        margin-bottom: 0 !important;
+        padding: 0 0 !important;
     }
 
     .navbar-nav li a {
