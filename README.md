@@ -4,12 +4,10 @@ Wenn Sie unsere Urban Gardening Seite starten wollen, dann müssen sie folgende 
 
 1. Installieren von Python und Git.
 2. Klonen Sie sich das GitHub Repository und speichern Sie diesen an einem gewünschten Ort.
-3. Erstellen und starten Sie nun eine virtuelle Umgebung in diesem Ordner.
+3. Erstellen (Befehl z.b.: "python -m venv myvenv") und starten (Befehl z.B.:"myvenv\Scripts\activate") Sie nun eine virtuelle Umgebung in diesem Ordner.
 4. Installieren Sie nun die requirements, die Sie in der requirements.txt finden. Nutzen Sie hierfür den Befehl "pip install -r requirements.txt".
-5. Da die Datenbank nicht im GitHub gespeichert wird, müssen Sie nun diese mit dem Befehl "python manage.py makemigrations" in der Konsole anlegen. 
-Hier werden Sie nun gefragt, wie Sie die Felder benennen wollen. Sie geben hier "y" für yes ein und bekommen nun den Vorschlag diese
-mit timezone.now zu benennen. Genau das tun Sie (ggf. zwei mal).
-6. Um später selber z.B. einen Blogartikel zu verfassen, bearbeiten und zu löschen müssen Sie als Superuser angemeldet sein.
+5. Da die Datenbank nicht im GitHub gespeichert wird, müssen Sie nun die Migrationen mit dem Befehl "python manage.py migrate" in der Konsole anwenden. 
+6. Um selbst z.B. einen Blogartikel verfassen, bearbeiten und löschen zu können, müssen Sie als Superuser angemeldet sein.
 Diesen Superuser müssen Sie vorher allerdings erstellen, indem Sie "python manage.py createsuperuser" in die Konsole eingeben und anschließend
 Benutzername, E-Mail und Passwort eingeben.
 7. Nun kann der Server mit "python manage.py runserver" gestartet werden. Im Browser gelangen Sie mit der folgenden url auf die Seite: http://127.0.0.1:8000/
